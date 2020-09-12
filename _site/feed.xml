@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://klise.now.sh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://klise.now.sh/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-12T17:30:00+07:00</updated><id>https://klise.now.sh/feed.xml</id><title type="html">Cyber Security Blog</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community. </subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-12T22:58:12+07:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community. </subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">Zer0trust Sec Blog - Introduction</title><link href="http://0.0.0.0:4000/welcome-to-my-tech-blog/" rel="alternate" type="text/html" title="Zer0trust Sec Blog - Introduction" /><published>2015-04-20T01:00:00+07:00</published><updated>2015-04-20T01:00:00+07:00</updated><id>http://0.0.0.0:4000/welcome-to-my-tech-blog</id><content type="html" xml:base="http://0.0.0.0:4000/welcome-to-my-tech-blog/">&lt;p&gt;Hey folks, I would like to share my knowledge and interesting things related to cybersecurity.&lt;/p&gt;
+
+&lt;h3 id=&quot;cyber-security-topics-&quot;&gt;Cyber Security Topics 💻&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Linux&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Windows&lt;/li&gt;
+  &lt;li&gt;Threat Hunting&lt;/li&gt;
+  &lt;li&gt;Incident Response&lt;/li&gt;
+  &lt;li&gt;Forensics&lt;/li&gt;
+  &lt;li&gt;Malware Analysis&lt;/li&gt;
+  &lt;li&gt;Threat Intelligence&lt;/li&gt;
+  &lt;li&gt;Team work&lt;/li&gt;
+  &lt;li&gt;Investigations&lt;/li&gt;
+  &lt;li&gt;Operating System&lt;/li&gt;
+  &lt;li&gt;Mindmaps&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;author-contact&quot;&gt;Author Contact&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/P3t3rp4rk4r&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/P3t3rp4rk3r&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://crazybulletctfwriteups.wordpress.com&quot;&gt;Old Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="tech" /><category term="blog" /><category term="cybersecurity" /><summary type="html">Hey folks, I would like to share my knowledge and interesting things related to cybersecurity.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/cara-memperbarui-fork-repository/repo.png" /><media:content medium="image" url="http://0.0.0.0:4000/cara-memperbarui-fork-repository/repo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
