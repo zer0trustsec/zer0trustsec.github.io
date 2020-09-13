@@ -18,7 +18,7 @@ Most of the enterprise companies were migrating their infrastructure to cloud. T
 ##### DevOps - SSH weak keys scan:
 
 <figure>
-<img src="/devops-vagrant-default-cred-check/Vagrant_SSH.gif" alt="DevOps - Security Checks">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/devops-vagrant-default-cred-check/Vagrant_SSH.gif" alt="DevOps - Security Checks">
 <figcaption> Steps to Reproduce - DevSecOps (SSH Keys) </figcaption>
 </figure>
 
