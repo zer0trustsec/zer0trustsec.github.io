@@ -10,7 +10,7 @@ As a part of OSINT/Recon activity to identify sensitive information for specific
 ##### Google Dork - .git folder exposure:
 
 <figure>
-<img src="/redteam-git-config-googledork/gdrkgit.png" alt="Google dork">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/redteam-git-config-googledork/gdrkgit.png" alt="Google dork">
 <figcaption> Git folder google dork </figcaption>
 </figure>
 
