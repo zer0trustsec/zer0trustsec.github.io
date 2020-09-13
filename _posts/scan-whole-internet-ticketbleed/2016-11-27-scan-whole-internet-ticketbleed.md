@@ -21,3 +21,4 @@ $ /bin/masscan 0.0.0./0 -p443 --source-ip xxx.xxx.xxx.xx - xxx.xxx.xxx.xx --rate
 
 #### Tools used:
 [Massscan](https://github.com/robertdavidgraham/masscan)
+[Powershell code](https://gist.github.com/rayterrill/188409e5e4cec6895d1939e155fbf3ed)
