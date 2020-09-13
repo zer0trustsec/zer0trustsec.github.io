@@ -1,0 +1,35 @@
+I"Ó<p>In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.</p>
+
+<h4 id="what-browser-can-access-from-enduser-endpoint">What browser can access from enduser endpoint:</h4>
+
+<ol>
+  <li>Location</li>
+  <li>Software (OS / Browser version / Browser Plugins)</li>
+  <li>Hardware (CPU info / GPU / Battery percentage )</li>
+  <li>Network Connection ( Public IP / Download Speed )</li>
+  <li>Social Media (Currently logged in Social media websites information )</li>
+  <li>Click jacking</li>
+  <li>Auto-fill Browser data (Phishing )</li>
+  <li>Gyroscope</li>
+  <li>Network scan (WiFi/LAN scan from browser itself )</li>
+  <li>Images ( Metadata reveals )</li>
+</ol>
+
+<h4 id="demo-website">Demo Website</h4>
+
+<p><a href="https://webkay.robinlinus.com/">https://webkay.robinlinus.com/</a></p>
+
+<h4 id="enduser-best-practices">Enduser Best Practices</h4>
+<p>Most of the websites were executing Java scripts to extract &amp; data collection from end user browser.To block those scripts running in background, we have to install below items:</p>
+<ol>
+  <li><a href="https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm?hl=en">NoScript Chrome browser Add-on</a></li>
+  <li><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/">NoScript Mozilla browser Add-on</a></li>
+  <li>Enable Private Browsing in enduserâ€™s browser.</li>
+  <li>Use Web-proxy to hide your real IP identity.</li>
+</ol>
+
+<h3 id="references">References</h3>
+<ul>
+  <li><a href="https://www.reddit.com/r/InternetIsBeautiful/comments/4d8x6f/this_website_tells_you_what_your_browser_knows/">Reddit</a></li>
+</ul>
+:ET

@@ -1,6 +1,41 @@
 [
   
     {
+      "title"    : "Security Admin Tip- Enable terminal history logging",
+      "tags"     : "linux, admin, history",
+      "url"      : "/enable-terminal-history-logging/",
+      "date"     : "2016-11-22 07:50:00 +0700"
+    } ,
+  
+    {
+      "title"    : "Is your browser knows about you ?",
+      "tags"     : "browser, access, data, collection",
+      "url"      : "/what-your-browser-knows-about-you/",
+      "date"     : "2016-11-22 07:00:00 +0700"
+    } ,
+  
+    {
+      "title"    : "Is your browser knows about you ?",
+      "tags"     : "browser, access, data, collection",
+      "url"      : "/stealpasswords-modern-browsers-autofill-privacy/",
+      "date"     : "2016-11-22 07:00:00 +0700"
+    } ,
+  
+    {
+      "title"    : "Bypass WAF - Techniques",
+      "tags"     : "WAF, bypass, techniques",
+      "url"      : "/bypass-WAF-blogs/",
+      "date"     : "2016-11-20 09:00:00 +0700"
+    } ,
+  
+    {
+      "title"    : "DirtyCow Vulnerability Detection",
+      "tags"     : "linux, kernel, detection, one-liner",
+      "url"      : "/dirtycow-vulnerability-quickcheck/",
+      "date"     : "2016-10-24 11:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Zer0trust Sec Blog - Introduction",
       "tags"     : "tech, blog, cybersecurity",
       "url"      : "/welcome-to-my-tech-blog/",

@@ -1,0 +1,28 @@
+I"+
+<p>Web Application Firewalls (WAF) were used to block the domains and monitor the traffic and block the malicious web traffic. I would like to share some resources to Red Teams / Penetration testers to bypass WAF technologies while doing their engagements.</p>
+
+<h4 id="bypass-waf---techniques">Bypass WAF - Techniques</h4>
+
+<ol>
+  <li><a href="http://wafbypass.me/w/index.php/Main_Page">http://wafbypass.me/w/index.php/Main_Page</a></li>
+  <li><a href="http://www.freebuf.com/articles/web/10099.html">http://www.freebuf.com/articles/web/10099.html</a></li>
+  <li><a href="http://tech-technical.com/index.php/2015/11/11/waf-bypass-sql-injection-tutorial/">http://tech-technical.com/index.php/2015/11/11/waf-bypass-sql-injection-tutorial/</a></li>
+  <li><a href="http://webvuln.blogspot.hk/2015_04_01_archive.html">http://webvuln.blogspot.hk/2015_04_01_archive.html</a></li>
+  <li><a href="http://www.wooyun.org/bugs/wooyun-2014-089426">http://www.wooyun.org/bugs/wooyun-2014-089426</a></li>
+  <li><a href="https://forum.90sec.org/forum.php?mod=viewthread&amp;tid=9133">https://forum.90sec.org/forum.php?mod=viewthread&amp;tid=9133</a></li>
+  <li><a href="http://www.idiot-attacker.com/2016/02/macam-macam-kode-bypass-waf.html">http://www.idiot-attacker.com/2016/02/macam-macam-kode-bypass-waf.html</a></li>
+  <li><a href="http://wooyun.org/bugs/wooyun-2010-0121291">http://wooyun.org/bugs/wooyun-2010-0121291</a></li>
+  <li><a href="http://wooyun.org/bugs/wooyun-2010-0115175">http://wooyun.org/bugs/wooyun-2010-0115175</a></li>
+  <li><a href="http://drops.wooyun.org/tips/7883">http://drops.wooyun.org/tips/7883</a></li>
+  <li><a href="http://www.securityidiots.com/Web-Pentest/WAF-Bypass/">http://www.securityidiots.com/Web-Pentest/WAF-Bypass/</a></li>
+  <li><a href="http://www.pentest.net.cn/post/7">http://www.pentest.net.cn/post/7</a></li>
+  <li><a href="http://www.mottoin.com/86886.html">http://www.mottoin.com/86886.html</a></li>
+  <li><a href="http://mp.weixin.qq.com/s?__biz=MzIyNjQzMjcyNw==&amp;mid=2247483860&amp;idx=1&amp;sn=fa19f02e29d25f5f6852af27451ae4a9&amp;scene=23&amp;srcid=0815JYA53l0Bk3PMkhzRlKUh#rd">http://mp.weixin.qq.com/s?__biz=MzIyNjQzMjcyNw==&amp;mid=2247483860&amp;idx=1&amp;sn=fa19f02e29d25f5f6852af27451ae4a9&amp;scene=23&amp;srcid=0815JYA53l0Bk3PMkhzRlKUh#rd</a></li>
+  <li><a href="https://github.com/borbelyau/bypass-waf-ids-ips/blob/master/evasionsqli_methods">https://github.com/borbelyau/bypass-waf-ids-ips/blob/master/evasionsqli_methods</a></li>
+</ol>
+
+<h5 id="references">References</h5>
+<ul>
+  <li><a href="https://pastebin.com/cVR4jLBr">Github</a></li>
+</ul>
+:ET

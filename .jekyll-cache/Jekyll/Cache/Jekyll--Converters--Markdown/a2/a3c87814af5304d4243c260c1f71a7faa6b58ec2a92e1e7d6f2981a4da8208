@@ -1,0 +1,23 @@
+I"�<p>Dirty COW vulnerability affects the Linux Kernel. Most of the open-source operating systems such as RedHat, Ubuntu, Fedora, Debian are based over Linux kernel. As a result, this vulnerability is a “High” priority one as it can affect a huge percentage of servers running over Linux and Android kernels.</p>
+
+<p>CVE-2016-5195 exploit can be misused by malicious users who are provided with shell access in Linux servers. They can gain root access and attack other users.When combined with other attacks such as SQL injection, this privilege escalation attack can even mess up the entire data in these servers, which makes it a critical one.</p>
+
+<h5 id="vulnerability-identification">Vulnerability Identification</h5>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># - Matches on source and compiled code</span>
+<span class="c"># - Searches in user home directories by default</span>
+<span class="c"># - Detects certain strings in files smaller 300 kbyte</span>
+<span class="c"># - Does not print anything if nothing was found</span>
+<span class="c"># - Appends the file's time stamp of the files in question &gt; good indicator to spot false positives</span>
+<span class="c"># - Should work on most Linux systems with bash</span>
+<span class="c"># Old version</span>
+<span class="c"># for f in $(find /home/ -type f -size -300 2&gt; /dev/null); do if [[ $(strings -a "$f" 2&gt; /dev/null | egrep "/proc/(self|%d)/(mem|maps)") != "" ]];then m=$(stat -c %y $f); echo "Contains DirtyCOW string: $f MOD_DATE: $m"; fi; done;</span>
+<span class="k">for </span>f <span class="k">in</span> <span class="si">$(</span>find /home/ <span class="nt">-type</span> f <span class="nt">-size</span> <span class="nt">-300</span> 2&gt; /dev/null<span class="si">)</span><span class="p">;</span> <span class="k">do if</span> <span class="o">[[</span> <span class="si">$(</span>egrep <span class="s2">"/proc/(self|%d)/(mem|maps)"</span> <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span><span class="si">)</span> <span class="o">!=</span> <span class="s2">""</span> <span class="o">]]</span><span class="p">;</span><span class="k">then </span><span class="nv">m</span><span class="o">=</span><span class="si">$(</span><span class="nb">stat</span> <span class="nt">-c</span> %y <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span><span class="si">)</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">"Contains DirtyCOW string: </span><span class="nv">$f</span><span class="s2"> MOD_DATE: </span><span class="nv">$m</span><span class="s2">"</span><span class="p">;</span> <span class="k">fi</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span>
+
+</code></pre></div></div>
+<h5 id="references">References</h5>
+<ul>
+  <li><a href="https://gist.github.com/Neo23x0/e800b698dd8739c957144722dc5195c8">Github</a></li>
+</ul>
+:ET
