@@ -7,6 +7,14 @@ description: Google dork to identify the git
 
 As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.
 
+##### Google Dork - .git folder exposure:
+
+<figure>
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/redteam-git-config-googledork/gdrkgit.png" alt="Google dork">
+<figcaption> Git folder google dork </figcaption>
+</figure>
+
+
 #### Google Dork:
 ```text
 intext:"index of /.git" "parent directory"
