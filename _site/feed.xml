@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-13T15:40:54+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community. </subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">Security Admin Tip- Enable terminal history logging</title><link href="http://localhost:4000/enable-terminal-history-logging/" rel="alternate" type="text/html" title="Security Admin Tip- Enable terminal history logging" /><published>2016-11-22T07:50:00+07:00</published><updated>2016-11-22T07:50:00+07:00</updated><id>http://localhost:4000/enable-terminal-history-logging</id><content type="html" xml:base="http://localhost:4000/enable-terminal-history-logging/">&lt;p&gt;Most of the times, When i was handling some IR investigations, I found some missing part and important artifacts in Linux machines. As a DFIR investigator, we do timeline analysis and look at malicious command execution history in linux machines.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-13T18:42:32+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community. </subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">What is a shell? 🐚 adalah kerang ajaib?</title><link href="http://localhost:4000/apa-itu-shell/" rel="alternate" type="text/html" title="What is a shell? 🐚 adalah kerang ajaib?" /><published>2020-01-25T11:58:47+07:00</published><updated>2020-01-25T11:58:47+07:00</updated><id>http://localhost:4000/apa-itu-shell</id><content type="html" xml:base="http://localhost:4000/apa-itu-shell/">&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=tc4ROCJYbm0&amp;amp;t=70&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dulu&lt;/a&gt; Sebelum adanya &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; cara user berinteraksi dengan komputer menggunakan &lt;abbr title=&quot;Command Line Interface&quot;&gt;CLI&lt;/abbr&gt; yaitu mengetik baris perintah pada sebuah antarmuka dalam bentuk baris teks seperti 👇.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/apa-itu-shell/terminal_nginx.gif&quot; alt=&quot;installing nginx in ubuntu&quot; /&gt;
+&lt;figcaption&gt;Fig 1. Terminal emulator, instalasi package dan check service.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Jika kamu pernah menggunakan unix/linux mungkin pernah menggunakan program diatas, bahkan mungkin setiap hari menggunakannya untuk mengeksekusi suatu perintah melalui &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_terminal_emulators&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;terminal emulator&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;User&lt;sup id=&quot;user&quot;&gt;&lt;a href=&quot;#user-ref&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; tidak bisa secara langsung berkomunikasi dengan sebuah hardware komputer, maka dari itu kita membutuhkan sebuah sistem operasi; &lt;strong&gt;Kernel&lt;/strong&gt; adalah program yang merupakan inti utama dari sistem operasi komputer.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/apa-itu-shell/kernel.png&quot; alt=&quot;kernel central of operating system&quot; /&gt;
+&lt;figcaption&gt;Fig 2. bagan kernel.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Kernel memfasilitasi interaksi antara komponen perangkat keras dan perangkat lunak, berperan untuk menangani permintaan input/ouput dari perangkat lunak, selanjutnya menerjemahkannya ke dalam pemrosesan data untuk diintruksikan ke CPU, sehingga Hardware(cpu, memory, devices) mengerti perintah yang dimaksud dari pengguna.&lt;/p&gt;
+
+&lt;p&gt;Ketika kita menginputkan suatu perintah pada terminal emulator, kernel tidak langsung mengerti perintah yang kita ketik, kita membutuhkan suatu interface sebagai perantara menuju kernel yaitu &lt;strong&gt;Shell&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/apa-itu-shell/shell.png&quot; alt=&quot;shell&quot; /&gt;
+&lt;figcaption&gt;Fig 3. bagan komunikasi shell.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;mark&gt;Shell adalah sebuah command-line interpreter; program yang berperan sebagai penerjemah perintah yang diinputkan oleh User yang melalui terminal&lt;/mark&gt;, sehingga perintah tersebut bisa dimengerti oleh si Kernel.&lt;/p&gt;
+
+&lt;p&gt;Login shell biasanya ditetapkan oleh local System Administrator ketika pada saat pertama user kamu dibuat, kamu bisa lihat login shell yang sedang kamu gunakan dengan perintah dibawah ini.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SHELL&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# atau&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Setiap shell mempunyai default prompt. beberapa shell yang paling umum:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;dollar sign&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# sh, ksh, bash&lt;/span&gt;
+% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;percent sign&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# csh, tcsh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;terminologi-pada-shell-prompt&quot;&gt;Terminologi pada shell prompt&lt;/h5&gt;
+
+&lt;p&gt;Shell prompt adalah tempat dimana kita menuliskan suatu perintah, berikut adalah terminologinya ini membantu, jika kamu ingin mengetahui bagian-bagianya.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/apa-itu-shell/term_shell_prompt.png&quot; alt=&quot;shell&quot; /&gt;
+&lt;figcaption&gt;Fig 4. bagian-bagin dari shell prompt.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Dibawah ini salah satu contoh perintah sederhana untuk menampilkan sebuah arsitektur CPU komputer yang sedang saya gunakan.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/apa-itu-shell/terminal_lscpu.gif&quot; alt=&quot;installing nginx in ubuntu&quot; /&gt;
+&lt;figcaption&gt;Fig 5. menampilkan informasi tentang arsitektur CPU.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Dari perintah yang contohkan, ketika user mengetikan suatu inputan perintah di terminal dan menekan &lt;kbd&gt;ENTER&lt;/kbd&gt;, maka shell akan mengubah perintah user menjadi bahasa yang bisa dipahami oleh kernel, dan Kernel menerjemahkannya ke dalam pemrosesan data untuk diintruksikan ke Hardware sehingga menghasilkan output yg sesuai dengan perintah user.&lt;/p&gt;
+
+&lt;p&gt;Shell mempunyai beberapa macam dan turunan, berikut yang paling umum.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/apa-itu-shell/shell_evolution.png&quot; alt=&quot;shell evolution&quot; /&gt;
+&lt;figcaption&gt;Fig 6. evaluasi shell dari tahun ke tahun.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Sedikit penjelasan dari gambar diatas.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bourne shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt;
+Dikembangkan oleh Stephen Bourne di Bell Labs, yang kala itu sebagai pengganti Thompson shell(diciptakan Ken Thompson), banyak sistem unix-like tetap memiliki &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/bin/sh&lt;/code&gt;—yang mana menjadi symbolic link atau hard link, bahkan ketika shell lain yang digunakan tetap &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt; adalah sebagai dasarnya, sebagai kompatibilitas perintah.&lt;/li&gt;
+  &lt;li&gt;Korn shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ksh&lt;/code&gt; Unix shell yang dikembangkan oleh David Korn di Bell Labs,
+inisialiasi pengembangan ini berdasar pada source code Bourne shell, namun juga memiliki fitur &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csh&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt;, pengembanganya pun pada saat saya menulis ini pun terus &lt;a href=&quot;http://github.com/att/ast&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;terawat&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Bourne again shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt;
+adalah proyek ini open source &lt;a href=&quot;http://gnu.org/software/bash/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GNU project&lt;/a&gt; memilki kompatibel dengan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh&lt;/code&gt; yang menggabungkan fitur penting dari &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ksh&lt;/code&gt; dan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csh&lt;/code&gt;, dan menjadi salah satu shell yang paling umum digunakan (umumnya menjadi default shell login Linux dan Apple’s macOS Mojave).&lt;/li&gt;
+  &lt;li&gt;Z shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt; ini mempunyai wadah komunitasnya disebutnya &lt;a href=&quot;http://ohmyz.sh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;“Oh My Zsh”&lt;/a&gt;, plug-in dan theme &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt; bisa kita temukan di komunitas ini, saya saat ini menggunakan &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt;, shell ini juga menjadi default dari sistem operasi macOS Catalina, yang menggantikan bash.&lt;/li&gt;
+  &lt;li&gt;friendly interactive shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fish&lt;/code&gt;
+yah sesuai dengan &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;deskripsi&lt;/a&gt; di web nya, menurut saya shell ini fun banget, fitur yang saya sukai dari shell ini autosuggestions, dan konfigurasi yang mudah melalui web based.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Masih banyak yang belum dijelaskan pada tulisan ini jika masih tertarik, baca lebih &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_command-line_interpreters#Operating_system_shells&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;banyak&lt;/a&gt; dan juga &lt;a href=&quot;http://en.wikipedia.org/wiki/Comparison_of_command_shells&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;komparasinya&lt;/a&gt; masing-masing shell.&lt;/p&gt;
+
+&lt;p&gt;Jika kamu tertarik untuk mengubah default shell login pada sistem operasi, kamu bisa menginstall dengan cara mengikuti didokumentasi/cara penginstallan dimasing-masing shell disini saya tidak membahas karena distro yang kita pakai mungkin berbeda-beda.&lt;/p&gt;
+
+&lt;p&gt;Untuk menjadikan default shell login pada OS bisa menggunakan perintah ini.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# command&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chsh &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;LOGIN]
+
+&lt;span class=&quot;c&quot;&gt;# contoh penggunaan&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /user/bin/zsh harpi
+&lt;span class=&quot;c&quot;&gt;# mengubah default shell user harpi menjadi zsh shell.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;reboot
+
+&lt;span class=&quot;c&quot;&gt;# atau kamu juga bisa mengubah file /etc/passwd dan edit secara manual user shellnya.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# jika masih bingung manfaatkan perintah man untuk melihat manual page.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;man chsh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Terakhir untuk tulisan ini, shell memilki berbagai macam, pilihlah shell yang sesuai dengan keinginanmu untuk menunjang produktivitas dan sesuaikan dengan kebutuhan, terlalu banyak plugin dan kebingungan memilih tema itu buruk 😁.&lt;/p&gt;
+
+&lt;p&gt;Terimakasih sudah baca, &lt;em&gt;penulis menerima kritik dan saran.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;notes&quot;&gt;Notes&lt;/h5&gt;
+
+&lt;p&gt;&lt;small id=&quot;user-ref&quot;&gt;&lt;sup&gt;&lt;a href=&quot;#user&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; Manusia yang mengoperasikan dan mengendalikan sistem komputer.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;resources&quot;&gt;Resources&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://developer.ibm.com/tutorials/l-linux-shells/&quot;&gt;Evolution shells in Linux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.linfo.org/kernel.html&quot;&gt;Kernel Defintion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cis.rit.edu/class/simg211/unixintro/Shell.html&quot;&gt;The Shell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="unix/linux" /><category term="cli" /><summary type="html">Dulu Sebelum adanya GUI cara user berinteraksi dengan komputer menggunakan CLI yaitu mengetik baris perintah pada sebuah antarmuka dalam bentuk baris teks seperti 👇.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/apa-itu-shell/shell_evolution.png" /><media:content medium="image" url="http://localhost:4000/apa-itu-shell/shell_evolution.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is your saved passwords were safe in browser?</title><link href="http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy/" rel="alternate" type="text/html" title="Is your saved passwords were safe in browser?" /><published>2016-11-24T09:00:00+07:00</published><updated>2016-11-24T09:00:00+07:00</updated><id>http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy</id><content type="html" xml:base="http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy/">&lt;p&gt;In this article, I would like to share the server-side source code for stealing auto-fill saved passwords from modern browsers. It might be useful for Penetration testers or Red Teams.&lt;/p&gt;
+
+&lt;h4 id=&quot;demo-steps&quot;&gt;Demo Steps:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;User’s should enter the dummy username/password from available form.&lt;/li&gt;
+  &lt;li&gt;Save the password in browser&lt;/li&gt;
+  &lt;li&gt;XSS code technique will steal password from auto-filled password field.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;server-side-source-code&quot;&gt;Server side-source code:&lt;/h5&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/stealpasswords-modern-browsers-autofill-privacy/code.png&quot; alt=&quot;Server-side source code&quot; /&gt;
+&lt;figcaption&gt;PHP code&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;demo-website&quot;&gt;Demo Website&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://133.242.134.241/exploit/password_manager.php&quot;&gt; Public hosted Attacker Server - May takedown in future&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="browser" /><category term="access" /><category term="data" /><category term="collection" /><category term="redteam" /><summary type="html">In this article, I would like to share the server-side source code for stealing auto-fill saved passwords from modern browsers. It might be useful for Penetration testers or Red Teams.</summary></entry><entry><title type="html">Security Admin Tip- Enable terminal history logging</title><link href="http://localhost:4000/enable-terminal-history-logging/" rel="alternate" type="text/html" title="Security Admin Tip- Enable terminal history logging" /><published>2016-11-22T07:50:00+07:00</published><updated>2016-11-22T07:50:00+07:00</updated><id>http://localhost:4000/enable-terminal-history-logging</id><content type="html" xml:base="http://localhost:4000/enable-terminal-history-logging/">&lt;p&gt;Most of the times, When i was handling some IR investigations, I found some missing part and important artifacts in Linux machines. As a DFIR investigator, we do timeline analysis and look at malicious command execution history in linux machines.&lt;/p&gt;
 
 &lt;p&gt;But most of the lazy linux administrators were not enabling the history logging with date in linux machines. We don’t see those command logging capabilities in most of the organisations, It will be very challenging for DFIR investigators while handling the incidents.&lt;/p&gt;
 
@@ -9,40 +139,7 @@
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; ~/.bash_profile
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="linux" /><category term="admin" /><category term="history" /><summary type="html">Most of the times, When i was handling some IR investigations, I found some missing part and important artifacts in Linux machines. As a DFIR investigator, we do timeline analysis and look at malicious command execution history in linux machines.</summary></entry><entry><title type="html">Is your browser knows about you ?</title><link href="http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy/" rel="alternate" type="text/html" title="Is your browser knows about you ?" /><published>2016-11-22T07:00:00+07:00</published><updated>2016-11-22T07:00:00+07:00</updated><id>http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy</id><content type="html" xml:base="http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy/">&lt;p&gt;In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.&lt;/p&gt;
-
-&lt;h4 id=&quot;what-browser-can-access-from-enduser-endpoint&quot;&gt;What browser can access from enduser endpoint:&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Location&lt;/li&gt;
-  &lt;li&gt;Software (OS / Browser version / Browser Plugins)&lt;/li&gt;
-  &lt;li&gt;Hardware (CPU info / GPU / Battery percentage )&lt;/li&gt;
-  &lt;li&gt;Network Connection ( Public IP / Download Speed )&lt;/li&gt;
-  &lt;li&gt;Social Media (Currently logged in Social media websites information )&lt;/li&gt;
-  &lt;li&gt;Click jacking&lt;/li&gt;
-  &lt;li&gt;Auto-fill Browser data (Phishing )&lt;/li&gt;
-  &lt;li&gt;Gyroscope&lt;/li&gt;
-  &lt;li&gt;Network scan (WiFi/LAN scan from browser itself )&lt;/li&gt;
-  &lt;li&gt;Images ( Metadata reveals )&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;demo-website&quot;&gt;Demo Website&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://webkay.robinlinus.com/&quot;&gt;https://webkay.robinlinus.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;enduser-best-practices&quot;&gt;Enduser Best Practices&lt;/h4&gt;
-&lt;p&gt;Most of the websites were executing Java scripts to extract &amp;amp; data collection from end user browser.To block those scripts running in background, we have to install below items:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm?hl=en&quot;&gt;NoScript Chrome browser Add-on&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/noscript/&quot;&gt;NoScript Mozilla browser Add-on&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Enable Private Browsing in enduser’s browser.&lt;/li&gt;
-  &lt;li&gt;Use Web-proxy to hide your real IP identity.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/InternetIsBeautiful/comments/4d8x6f/this_website_tells_you_what_your_browser_knows/&quot;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="browser" /><category term="access" /><category term="data" /><category term="collection" /><summary type="html">In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.</summary></entry><entry><title type="html">Is your browser knows about you ?</title><link href="http://localhost:4000/what-your-browser-knows-about-you/" rel="alternate" type="text/html" title="Is your browser knows about you ?" /><published>2016-11-22T07:00:00+07:00</published><updated>2016-11-22T07:00:00+07:00</updated><id>http://localhost:4000/what-your-browser-knows-about-you</id><content type="html" xml:base="http://localhost:4000/what-your-browser-knows-about-you/">&lt;p&gt;In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="linux" /><category term="admin" /><category term="history" /><summary type="html">Most of the times, When i was handling some IR investigations, I found some missing part and important artifacts in Linux machines. As a DFIR investigator, we do timeline analysis and look at malicious command execution history in linux machines.</summary></entry><entry><title type="html">Is your browser knows about you ?</title><link href="http://localhost:4000/what-your-browser-knows-about-you/" rel="alternate" type="text/html" title="Is your browser knows about you ?" /><published>2016-11-22T07:00:00+07:00</published><updated>2016-11-22T07:00:00+07:00</updated><id>http://localhost:4000/what-your-browser-knows-about-you</id><content type="html" xml:base="http://localhost:4000/what-your-browser-knows-about-you/">&lt;p&gt;In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.&lt;/p&gt;
 
 &lt;h4 id=&quot;what-browser-can-access-from-enduser-endpoint&quot;&gt;What browser can access from enduser endpoint:&lt;/h4&gt;
 

@@ -1,6 +1,20 @@
 [
   
     {
+      "title"    : "What is a shell? 🐚 adalah kerang ajaib?",
+      "tags"     : "unix/linux, cli",
+      "url"      : "/apa-itu-shell/",
+      "date"     : "2020-01-25 11:58:47 +0700"
+    } ,
+  
+    {
+      "title"    : "Is your saved passwords were safe in browser?",
+      "tags"     : "browser, access, data, collection, redteam",
+      "url"      : "/stealpasswords-modern-browsers-autofill-privacy/",
+      "date"     : "2016-11-24 09:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Security Admin Tip- Enable terminal history logging",
       "tags"     : "linux, admin, history",
       "url"      : "/enable-terminal-history-logging/",
@@ -11,13 +25,6 @@
       "title"    : "Is your browser knows about you ?",
       "tags"     : "browser, access, data, collection",
       "url"      : "/what-your-browser-knows-about-you/",
-      "date"     : "2016-11-22 07:00:00 +0700"
-    } ,
-  
-    {
-      "title"    : "Is your browser knows about you ?",
-      "tags"     : "browser, access, data, collection",
-      "url"      : "/stealpasswords-modern-browsers-autofill-privacy/",
       "date"     : "2016-11-22 07:00:00 +0700"
     } ,
   
