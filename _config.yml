@@ -23,7 +23,7 @@ author:
 
 # URL settings
 url: "https://zer0trustsec.github.io" #
-baseurl:
+baseurl: https://github.com/zer0trustsec/zer0trustsec.github.io
 permalink: /:title/
 google_analytics: # leave it blank if not wish
 fb_appid:

@@ -15,7 +15,7 @@ In this article, I would like to share the server-side source code for stealing 
 ##### Server side-source code:
 
 <figure>
-<img src="/stealpasswords-modern-browsers-autofill-privacy/code.png" alt="Server-side source code">
+<img src="{{site.baseurl}}/stealpasswords-modern-browsers-autofill-privacy/code.png" alt="Server-side source code">
 <figcaption>PHP code</figcaption>
 </figure>
 
