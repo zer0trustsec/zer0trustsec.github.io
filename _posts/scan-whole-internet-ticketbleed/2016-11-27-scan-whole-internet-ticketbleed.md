@@ -1,6 +1,6 @@
 ---
 title: Ticketbleed - Scan whole internet using massscan tool
-date: 2016-11-27 19:00:00 +07:00
+date: 2017-02-10 19:00:00 +07:00
 tags: [redteam, massscan, ticketbleed]
 description: Ticketbleed vulnerability
 ---
