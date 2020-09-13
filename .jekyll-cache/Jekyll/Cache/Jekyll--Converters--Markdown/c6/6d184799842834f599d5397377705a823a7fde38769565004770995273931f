@@ -1,4 +1,4 @@
-I"ù<p>Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</p>
+I"<p>Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</p>
 
 <h4 id="devops-environment---security-checks-ssh-keys">DevOps Environment - Security Checks (SSH Keys):</h4>
 
@@ -13,7 +13,7 @@
 <h5 id="devops---ssh-weak-keys-scan">DevOps - SSH weak keys scan:</h5>
 
 <figure>
-<img src="/devops-vagrant-default-cred-check/Vagrant_SSH.gif" alt="DevOps - Security Checks" />
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/devops-vagrant-default-cred-check/Vagrant_SSH.gif" alt="DevOps - Security Checks" />
 <figcaption> Steps to Reproduce - DevSecOps (SSH Keys) </figcaption>
 </figure>
 
