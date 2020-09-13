@@ -15,7 +15,7 @@ $ /bin/masscan 0.0.0./0 -p443 --source-ip xxx.xxx.xxx.xx - xxx.xxx.xxx.xx --rate
 ##### Terminal Output:
 
 <figure>
-<img src="/scan-whole-internet-ticketbleed/terminal.png" alt="Terminal command output">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/scan-whole-internet-ticketbleed/terminal.png" alt="Terminal command output">
 <figcaption> Terminal Command </figcaption>
 </figure>
 
