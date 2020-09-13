@@ -1,18 +1,18 @@
 # Site settings
 title:  Blog | Cyber Security  # site title
 description: >- # site description
-  He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community. 
+  He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: # site repo [optional]
+repo: https://github.com/zer0trustsec/zer0trustsec.github.io # site repo [optional]
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
   name: Santhosh Baswa # author name
   bio: >- # tell to the world
-    Security Engineer | IR | Forensics | Threat Hunter | Security Automation | 
+    Security Engineer | IR | Forensics | Threat Hunter | Security Automation |
     Personal site and blog, available at <a href="https://twitter.com/P3t3rp4rk4r" target="_blank" rel="noopener">@Twitter</a>
   username: P3t3rp4rk3r # general username
   github: github_username # github username
