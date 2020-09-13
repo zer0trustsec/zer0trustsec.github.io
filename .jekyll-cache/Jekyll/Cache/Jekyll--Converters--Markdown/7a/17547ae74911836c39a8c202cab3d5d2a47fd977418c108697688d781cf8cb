@@ -1,9 +1,9 @@
-I"S<p>As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.</p>
+I"û<p>As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.</p>
 
 <h5 id="google-dork---git-folder-exposure">Google Dork - .git folder exposure:</h5>
 
 <figure>
-<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/redteam-git-config-googledork/gdrkgit.png" alt="Google Dork .git" />
+<img src="/redteam-git-config-googledork/gdrkgit.png" alt="Google dork" />
 <figcaption> git folder google dork </figcaption>
 </figure>
 
