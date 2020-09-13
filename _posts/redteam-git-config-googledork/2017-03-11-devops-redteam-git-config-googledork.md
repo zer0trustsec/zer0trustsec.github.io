@@ -2,7 +2,7 @@
 title: Redteam Tip -  Google dork for .git folder exposure
 date: 2017-03-11 10:00:00 +07:00
 tags: [github, googledork, defense]
-description: Google dork to identify the git
+description: Google dork to identify the git 
 ---
 
 As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.
