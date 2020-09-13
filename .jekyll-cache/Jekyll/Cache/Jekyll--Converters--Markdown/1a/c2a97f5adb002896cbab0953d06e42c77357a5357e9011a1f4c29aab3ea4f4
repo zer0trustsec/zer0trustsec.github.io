@@ -1,0 +1,16 @@
+I"Å<p>This post is useful for Red teamers / CyberOps / Penetration testers to use Mass Scan tool to identify the Ticketbleed vulnerable servers in whole internet.</p>
+
+<h4 id="bash-command">Bash Command:</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>/bin/masscan 0.0.0./0 <span class="nt">-p443</span> <span class="nt">--source-ip</span> xxx.xxx.xxx.xx - xxx.xxx.xxx.xx <span class="nt">--rate</span> 250000 <span class="nt">-oB</span> ticketbleed <span class="nt">--ticketbleed</span>
+</code></pre></div></div>
+
+<h5 id="terminal-output">Terminal Output:</h5>
+
+<figure>
+<img src="/scan-whole-internet-ticketbleed/terminal.png" alt="Terminal command output" />
+<figcaption> command </figcaption>
+</figure>
+
+<h5 id="tools-used">Tools used:</h5>
+<p><a href="https://github.com/robertdavidgraham/masscan">Massscan</a></p>
+:ET

@@ -1,4 +1,4 @@
-I"E<p>In this article, I would like to share the server-side source code for stealing auto-fill saved passwords from modern browsers. It might be useful for Penetration testers or Red Teams.</p>
+I"˜<p>In this article, I would like to share the server-side source code for stealing auto-fill saved passwords from modern browsers. It might be useful for Penetration testers or Red Teams.</p>
 
 <h4 id="demo-steps">Demo Steps:</h4>
 <ol>
@@ -10,7 +10,7 @@
 <h5 id="server-side-source-code">Server side-source code:</h5>
 
 <figure>
-<img src="/stealpasswords-modern-browsers-autofill-privacy/code.png" alt="Server-side source code" />
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/stealpasswords-modern-browsers-autofill-privacy/code.png" alt="Server-side source code" />
 <figcaption>PHP code</figcaption>
 </figure>
 
