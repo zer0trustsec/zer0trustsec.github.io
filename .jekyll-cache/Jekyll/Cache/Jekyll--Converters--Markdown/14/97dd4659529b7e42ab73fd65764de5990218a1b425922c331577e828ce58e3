@@ -1,0 +1,22 @@
+I"ù<p>Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</p>
+
+<h4 id="devops-environment---security-checks-ssh-keys">DevOps Environment - Security Checks (SSH Keys):</h4>
+
+<ol>
+  <li>Most of the DevOps environment VMs/Machines are using default credentials (vagrant/vagrant , root/vagrant)</li>
+  <li>Scanning the default SSH keys using metasploit - ssh_login_pubkey module.</li>
+  <li>Identify the weak SSH keys versions after the scan.</li>
+  <li>Login with Private key.</li>
+  <li>Get the vagrant/root shell.</li>
+</ol>
+
+<h5 id="devops---ssh-weak-keys-scan">DevOps - SSH weak keys scan:</h5>
+
+<figure>
+<img src="/devops-vagrant-default-cred-check/Vagrant_SSH.gif" alt="DevOps - Security Checks" />
+<figcaption> Steps to Reproduce - DevSecOps (SSH Keys) </figcaption>
+</figure>
+
+<h4 id="tools-used">Tools used:</h4>
+<p><a href="https://github.com/rapid7/metasploit-framework">Metasploit</a></p>
+:ET
