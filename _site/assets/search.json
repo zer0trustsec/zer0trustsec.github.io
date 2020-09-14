@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Zerologon - CVE-2020-1472 (POC)",
+      "tags"     : "exploit, poc, python, github",
+      "url"      : "/zerologon-domainadmin-netlogon-cryptography/",
+      "date"     : "2020-09-14 11:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "RedTeam Tip - Change MAC address in endpoint",
       "tags"     : "redteam, endpoint, pentest",
       "url"      : "/redteam-tip-change-mac-address/",

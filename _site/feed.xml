@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-14T12:17:39+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">RedTeam Tip - Change MAC address in endpoint</title><link href="http://localhost:4000/redteam-tip-change-mac-address/" rel="alternate" type="text/html" title="RedTeam Tip - Change MAC address in endpoint" /><published>2020-09-12T10:00:00+07:00</published><updated>2020-09-12T10:00:00+07:00</updated><id>http://localhost:4000/redteam-tip-change-mac-address</id><content type="html" xml:base="http://localhost:4000/redteam-tip-change-mac-address/">&lt;p&gt;In Most of the RedTeam/Pentest engagements, smart guys always change MAC address in compromise endpoints to bypass Security detection tools.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-14T13:35:05+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">Zerologon - CVE-2020-1472 (POC)</title><link href="http://localhost:4000/zerologon-domainadmin-netlogon-cryptography/" rel="alternate" type="text/html" title="Zerologon - CVE-2020-1472 (POC)" /><published>2020-09-14T11:00:00+07:00</published><updated>2020-09-14T11:00:00+07:00</updated><id>http://localhost:4000/zerologon-domainadmin-netlogon-cryptography</id><content type="html" xml:base="http://localhost:4000/zerologon-domainadmin-netlogon-cryptography/">&lt;p&gt;This vulnerability allowed threat actor to foothold on your enterprise (internal) network to become a domain admin with single click.&lt;/p&gt;
+
+&lt;p&gt;The vulnerability stems from a flaw in a cryptographic authentication scheme used by the Netlogon Remote Protocol, which among other things can be used to update computer passwords. This flaw allows attackers to impersonate any computer, including the domain controller itself, and execute remote procedure calls on their behalf.&lt;/p&gt;
+
+&lt;h4 id=&quot;github-tool&quot;&gt;Github Tool:&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/SecuraBV/CVE-2020-1472&quot;&gt;ZeroLogon- POC Script -Attacker&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SecureAuthCorp/impacket&quot;&gt;Impacket&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference-article&quot;&gt;Reference Article:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.secura.com/blog/zero-logon&quot;&gt;ZeroLogon Article&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="exploit" /><category term="poc" /><category term="python" /><category term="github" /><summary type="html">This vulnerability allowed threat actor to foothold on your enterprise (internal) network to become a domain admin with single click.</summary></entry><entry><title type="html">RedTeam Tip - Change MAC address in endpoint</title><link href="http://localhost:4000/redteam-tip-change-mac-address/" rel="alternate" type="text/html" title="RedTeam Tip - Change MAC address in endpoint" /><published>2020-09-12T10:00:00+07:00</published><updated>2020-09-12T10:00:00+07:00</updated><id>http://localhost:4000/redteam-tip-change-mac-address</id><content type="html" xml:base="http://localhost:4000/redteam-tip-change-mac-address/">&lt;p&gt;In Most of the RedTeam/Pentest engagements, smart guys always change MAC address in compromise endpoints to bypass Security detection tools.&lt;/p&gt;
 
 &lt;h5 id=&quot;change-mac-address---powershell-windows-os&quot;&gt;Change MAC Address - Powershell (Windows OS):&lt;/h5&gt;
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Set-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;Network Interface&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-MacAddress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;Random MAC Address&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -170,28 +185,4 @@ Deny from all
 &lt;h5 id=&quot;references&quot;&gt;References&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/Neo23x0/e800b698dd8739c957144722dc5195c8&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="linux" /><category term="kernel" /><category term="detection" /><category term="one-liner" /><summary type="html">Dirty COW vulnerability affects the Linux Kernel. Most of the open-source operating systems such as RedHat, Ubuntu, Fedora, Debian are based over Linux kernel. As a result, this vulnerability is a “High” priority one as it can affect a huge percentage of servers running over Linux and Android kernels.</summary></entry><entry><title type="html">Zer0trust Sec Blog - Introduction</title><link href="http://localhost:4000/welcome-to-my-tech-blog/" rel="alternate" type="text/html" title="Zer0trust Sec Blog - Introduction" /><published>2015-04-20T01:00:00+07:00</published><updated>2015-04-20T01:00:00+07:00</updated><id>http://localhost:4000/welcome-to-my-tech-blog</id><content type="html" xml:base="http://localhost:4000/welcome-to-my-tech-blog/">&lt;p&gt;Hey folks, I would like to share my knowledge and interesting things related to cybersecurity.&lt;/p&gt;
-
-&lt;h3 id=&quot;cyber-security-topics-&quot;&gt;Cyber Security Topics 💻&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Linux&lt;/li&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-  &lt;li&gt;Windows&lt;/li&gt;
-  &lt;li&gt;Threat Hunting&lt;/li&gt;
-  &lt;li&gt;Incident Response&lt;/li&gt;
-  &lt;li&gt;Forensics&lt;/li&gt;
-  &lt;li&gt;Malware Analysis&lt;/li&gt;
-  &lt;li&gt;Threat Intelligence&lt;/li&gt;
-  &lt;li&gt;Team work&lt;/li&gt;
-  &lt;li&gt;Investigations&lt;/li&gt;
-  &lt;li&gt;Operating System&lt;/li&gt;
-  &lt;li&gt;Mindmaps&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;author-contact&quot;&gt;Author Contact&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://twitter.com/P3t3rp4rk4r&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/P3t3rp4rk3r&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://crazybulletctfwriteups.wordpress.com&quot;&gt;Old Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="tech" /><category term="blog" /><category term="cybersecurity" /><summary type="html">Hey folks, I would like to share my knowledge and interesting things related to cybersecurity.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cara-memperbarui-fork-repository/repo.png" /><media:content medium="image" url="http://localhost:4000/cara-memperbarui-fork-repository/repo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="linux" /><category term="kernel" /><category term="detection" /><category term="one-liner" /><summary type="html">Dirty COW vulnerability affects the Linux Kernel. Most of the open-source operating systems such as RedHat, Ubuntu, Fedora, Debian are based over Linux kernel. As a result, this vulnerability is a “High” priority one as it can affect a huge percentage of servers running over Linux and Android kernels.</summary></entry></feed>
