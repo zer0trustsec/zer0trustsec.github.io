@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "RedTeam Tip - Change MAC address in endpoint",
+      "tags"     : "redteam, endpoint, pentest",
+      "url"      : "/redteam-tip-change-mac-address/",
+      "date"     : "2020-09-12 10:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Redteam Tip -  Google dork for .git folder exposure",
       "tags"     : "github, googledork, defense",
       "url"      : "/devops-redteam-git-config-googledork/",

@@ -1,0 +1,12 @@
+I"¹<p>In Most of the RedTeam/Pentest engagements, smart guys always change MAC address the compromise endpoints to bypass Security detection tools.</p>
+
+<h5 id="change-mac-address---powershell-windows-os">Change MAC Address - Powershell (Windows OS):</h5>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Set-NetAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"&lt;Network Interface&gt;"</span><span class="w"> </span><span class="nt">-MacAddress</span><span class="w"> </span><span class="s2">"&lt;Random MAC Address&gt;"</span><span class="w">
+</span><span class="c">#Set-NetAdapter -Name "Ethernet 1" -MacAddress "00-10-18-57-1B-0D"</span><span class="w">
+</span></code></pre></div></div>
+
+<h5 id="change-mac-address---command-line-linuxmac-os">Change MAC Address - Command line (Linux/Mac OS):</h5>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sudo</span> ifconfig &lt;interface&gt; ether &lt;Random MAC Address&gt;
+<span class="nv">$sudo</span> ifconfig en0 ether 00:18:57:1B-0D
+</code></pre></div></div>
+:ET
