@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Extract stored passwords from browser using Powershell",
+      "tags"     : "browser, savedpasswords, data, collection, redteam",
+      "url"      : "/extract-saved-browser-passwords-using-powershell/",
+      "date"     : "2020-09-15 09:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Zerologon - CVE-2020-1472 (POC)",
       "tags"     : "exploit, poc, python, github",
       "url"      : "/zerologon-domainadmin-netlogon-cryptography/",
