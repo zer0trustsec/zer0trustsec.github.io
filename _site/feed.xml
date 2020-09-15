@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-15T21:16:11+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">Extract stored passwords from browser using Powershell</title><link href="http://localhost:4000/extract-saved-browser-passwords-using-powershell/" rel="alternate" type="text/html" title="Extract stored passwords from browser using Powershell" /><published>2020-09-15T09:00:00+07:00</published><updated>2020-09-15T09:00:00+07:00</updated><id>http://localhost:4000/extract-saved-browser-passwords-using-powershell</id><content type="html" xml:base="http://localhost:4000/extract-saved-browser-passwords-using-powershell/">&lt;p&gt;In this article, I would like to share powershell code which is useful to extract saved password from Internet Explorer/Microsoft Edge browsers in Windows endpoint.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-15T22:08:24+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">OSINT - Email validation using forgetpassword functionality (Python).</title><link href="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/" rel="alternate" type="text/html" title="OSINT - Email validation using forgetpassword functionality (Python)." /><published>2020-09-15T19:00:00+07:00</published><updated>2020-09-15T19:00:00+07:00</updated><id>http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python</id><content type="html" xml:base="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/">&lt;p&gt;These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in most of the Threat Intel investigations.&lt;/p&gt;
+
+&lt;p&gt;In this post, I would like to share one of the github project which can take email address as an input and checking in top websites using “forget password” functionality.&lt;/p&gt;
+
+&lt;h4 id=&quot;github-project&quot;&gt;Github Project:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/megadose/holehe&quot;&gt;Github- Holehe Project - https://github.com/megadose/holehe&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&quot;prerequisites&quot;&gt;Prerequisites:&lt;/h5&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;holehe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;1.51
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;installation&quot;&gt;Installation:&lt;/h5&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/megadose/holehe.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;holehe/
+python3 setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;demo&quot;&gt;Demo:&lt;/h5&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/osint-email-validation-using-forgetpassword-function-using-python/demo.gif&quot; alt=&quot;Powershell code&quot; /&gt;
+&lt;figcaption&gt;Powershell command&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h5 id=&quot;import-as-python-module&quot;&gt;Import as Python module:&lt;/h5&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;holehe&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adobe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test@gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lastpass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test@gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/megadose/holehe-maltego&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="osint" /><category term="python" /><category term="email" /><category term="recon" /><category term="validation" /><summary type="html">These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in most of the Threat Intel investigations.</summary></entry><entry><title type="html">Extract stored passwords from browser using Powershell</title><link href="http://localhost:4000/extract-saved-browser-passwords-using-powershell/" rel="alternate" type="text/html" title="Extract stored passwords from browser using Powershell" /><published>2020-09-15T09:00:00+07:00</published><updated>2020-09-15T09:00:00+07:00</updated><id>http://localhost:4000/extract-saved-browser-passwords-using-powershell</id><content type="html" xml:base="http://localhost:4000/extract-saved-browser-passwords-using-powershell/">&lt;p&gt;In this article, I would like to share powershell code which is useful to extract saved password from Internet Explorer/Microsoft Edge browsers in Windows endpoint.&lt;/p&gt;
 
 &lt;h4 id=&quot;powershell-command&quot;&gt;Powershell command:&lt;/h4&gt;
 
@@ -8,7 +37,7 @@
 &lt;h5 id=&quot;execution&quot;&gt;Execution:&lt;/h5&gt;
 
 &lt;figure&gt;
-&lt;img src=&quot;/extract-saved-browser-passwords-using-powershell/credgrap.gif&quot; alt=&quot;Powershell code&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/extract-saved-browser-passwords-using-powershell/credgrap.gif&quot; alt=&quot;Powershell code&quot; /&gt;
 &lt;figcaption&gt;Powershell command&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -158,29 +187,4 @@ Deny from all
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/InternetIsBeautiful/comments/4d8x6f/this_website_tells_you_what_your_browser_knows/&quot;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="browser" /><category term="access" /><category term="data" /><category term="collection" /><summary type="html">In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.</summary></entry><entry><title type="html">Bypass WAF - Techniques</title><link href="http://localhost:4000/bypass-WAF-blogs/" rel="alternate" type="text/html" title="Bypass WAF - Techniques" /><published>2016-11-20T09:00:00+07:00</published><updated>2016-11-20T09:00:00+07:00</updated><id>http://localhost:4000/bypass-WAF-blogs</id><content type="html" xml:base="http://localhost:4000/bypass-WAF-blogs/">&lt;p&gt;Web Application Firewalls (WAF) were used to block the domains and monitor the traffic and block the malicious web traffic. I would like to share some resources to Red Teams / Penetration testers to bypass WAF technologies while doing their engagements.&lt;/p&gt;
-
-&lt;h4 id=&quot;bypass-waf---techniques&quot;&gt;Bypass WAF - Techniques&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wafbypass.me/w/index.php/Main_Page&quot;&gt;http://wafbypass.me/w/index.php/Main_Page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.freebuf.com/articles/web/10099.html&quot;&gt;http://www.freebuf.com/articles/web/10099.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tech-technical.com/index.php/2015/11/11/waf-bypass-sql-injection-tutorial/&quot;&gt;http://tech-technical.com/index.php/2015/11/11/waf-bypass-sql-injection-tutorial/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://webvuln.blogspot.hk/2015_04_01_archive.html&quot;&gt;http://webvuln.blogspot.hk/2015_04_01_archive.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.wooyun.org/bugs/wooyun-2014-089426&quot;&gt;http://www.wooyun.org/bugs/wooyun-2014-089426&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forum.90sec.org/forum.php?mod=viewthread&amp;amp;tid=9133&quot;&gt;https://forum.90sec.org/forum.php?mod=viewthread&amp;amp;tid=9133&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.idiot-attacker.com/2016/02/macam-macam-kode-bypass-waf.html&quot;&gt;http://www.idiot-attacker.com/2016/02/macam-macam-kode-bypass-waf.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wooyun.org/bugs/wooyun-2010-0121291&quot;&gt;http://wooyun.org/bugs/wooyun-2010-0121291&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wooyun.org/bugs/wooyun-2010-0115175&quot;&gt;http://wooyun.org/bugs/wooyun-2010-0115175&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://drops.wooyun.org/tips/7883&quot;&gt;http://drops.wooyun.org/tips/7883&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.securityidiots.com/Web-Pentest/WAF-Bypass/&quot;&gt;http://www.securityidiots.com/Web-Pentest/WAF-Bypass/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.pentest.net.cn/post/7&quot;&gt;http://www.pentest.net.cn/post/7&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mottoin.com/86886.html&quot;&gt;http://www.mottoin.com/86886.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzIyNjQzMjcyNw==&amp;amp;mid=2247483860&amp;amp;idx=1&amp;amp;sn=fa19f02e29d25f5f6852af27451ae4a9&amp;amp;scene=23&amp;amp;srcid=0815JYA53l0Bk3PMkhzRlKUh#rd&quot;&gt;http://mp.weixin.qq.com/s?__biz=MzIyNjQzMjcyNw==&amp;amp;mid=2247483860&amp;amp;idx=1&amp;amp;sn=fa19f02e29d25f5f6852af27451ae4a9&amp;amp;scene=23&amp;amp;srcid=0815JYA53l0Bk3PMkhzRlKUh#rd&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/borbelyau/bypass-waf-ids-ips/blob/master/evasionsqli_methods&quot;&gt;https://github.com/borbelyau/bypass-waf-ids-ips/blob/master/evasionsqli_methods&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;references&quot;&gt;References&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pastebin.com/cVR4jLBr&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="WAF" /><category term="bypass" /><category term="techniques" /><summary type="html">Web Application Firewalls (WAF) were used to block the domains and monitor the traffic and block the malicious web traffic. I would like to share some resources to Red Teams / Penetration testers to bypass WAF technologies while doing their engagements.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="browser" /><category term="access" /><category term="data" /><category term="collection" /><summary type="html">In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.</summary></entry></feed>

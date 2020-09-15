@@ -1,4 +1,4 @@
-I"™<p>In this article, I would like to share powershell code which is useful to extract saved password from Internet Explorer/Microsoft Edge browsers in Windows endpoint.</p>
+I"<p>In this article, I would like to share powershell code which is useful to extract saved password from Internet Explorer/Microsoft Edge browsers in Windows endpoint.</p>
 
 <h4 id="powershell-command">Powershell command:</h4>
 
@@ -8,12 +8,14 @@
 <h5 id="execution">Execution:</h5>
 
 <figure>
-<img src="/extract-saved-browser-passwords-using-powershell/credgrap.gif" alt="Powershell code" />
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/extract-saved-browser-passwords-using-powershell/credgrap.gif" alt="Powershell code" />
 <figcaption>Powershell command</figcaption>
 </figure>
 
 <h4 id="references">References</h4>
 
-<p><a href="https://github.com/HanseSecure/credgrap_ie_edge">Github</a>
-<a href="https://raw.githubusercontent.com/HanseSecure/credgrap_ie_edge/master/credgrap_ie_edge.ps1">Powershell code</a></p>
+<ul>
+  <li><a href="https://github.com/HanseSecure/credgrap_ie_edge">Github</a></li>
+  <li><a href="https://raw.githubusercontent.com/HanseSecure/credgrap_ie_edge/master/credgrap_ie_edge.ps1">Powershell code</a></li>
+</ul>
 :ET

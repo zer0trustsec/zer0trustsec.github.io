@@ -1,0 +1,22 @@
+I"�<p>These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in most of the Threat Intel investigations.</p>
+
+<p>In this post, I would like to share one of the github project which can take email address as an input and checking in top websites using “forgetpassword” functionality.</p>
+
+<h4 id="github-project">Github Project:</h4>
+
+<p><a href="https://github.com/megadose/holehe">Github- Holehe Project - https://github.com/megadose/holehe</a></p>
+
+<h5 id="demo">Demo:</h5>
+
+<figure>
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/extract-saved-browser-passwords-using-powershell/credgrap.gif" alt="Powershell code" />
+<figcaption>Powershell command</figcaption>
+</figure>
+
+<h4 id="references">References</h4>
+
+<ul>
+  <li><a href="https://github.com/HanseSecure/credgrap_ie_edge">Github</a></li>
+  <li><a href="https://raw.githubusercontent.com/HanseSecure/credgrap_ie_edge/master/credgrap_ie_edge.ps1">Powershell code</a></li>
+</ul>
+:ET
