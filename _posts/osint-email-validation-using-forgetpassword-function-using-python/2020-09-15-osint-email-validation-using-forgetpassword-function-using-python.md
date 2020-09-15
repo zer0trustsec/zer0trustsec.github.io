@@ -5,7 +5,7 @@ tags: [osint, python, email, recon, validation]
 description: Validate the emails on multiple websites
 ---
 
-These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in most of the Threat Intel investigations.
+These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in lot of Threat Intel investigations.
 
 In this post, I would like to share one of the interesting github project which can take email address as an input and checking in top websites using "forget password" functionality.
 
@@ -24,7 +24,7 @@ python3 setup.py install
 ```
 ##### Demo:
 <figure>
-<img src="/osint-email-validation-using-forgetpassword-function-using-python/demo.gif" alt="Powershell code">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/osint-email-validation-using-forgetpassword-function-using-python/demo.gif" alt="Powershell code">
 <figcaption>Powershell command</figcaption>
 </figure>
 
