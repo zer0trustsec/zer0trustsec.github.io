@@ -1,0 +1,31 @@
+I"	<p>These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in lot of Threat Intel investigations.</p>
+
+<p>In this post, I would like to share one of the interesting Github project which can take email address as an input and checking in top websites using “forget password” functionality.</p>
+
+<h4 id="github-project">Github Project:</h4>
+<p><a href="https://github.com/megadose/holehe">Github- Holehe Project - https://github.com/megadose/holehe</a></p>
+<h5 id="prerequisites">Prerequisites:</h5>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install </span><span class="nv">holehe</span><span class="o">==</span>1.51
+</code></pre></div></div>
+<h5 id="installation">Installation:</h5>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/megadose/holehe.git
+<span class="nb">cd </span>holehe/
+python3 setup.py <span class="nb">install</span>
+</code></pre></div></div>
+<h5 id="demo">Demo:</h5>
+<figure>
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/osint-email-validation-using-forgetpassword-function-using-python/demo.gif" alt="Powershell code" />
+<figcaption>Powershell command</figcaption>
+</figure>
+
+<h5 id="import-as-python-module">Import as Python module:</h5>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">holehe</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">print</span><span class="p">(</span><span class="n">adobe</span><span class="p">(</span><span class="s">"test@gmail.com"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lastpass</span><span class="p">(</span><span class="s">"test@gmail.com"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h4 id="references">References</h4>
+<ul>
+  <li><a href="https://github.com/megadose/holehe-maltego">Github</a></li>
+</ul>
+:ET

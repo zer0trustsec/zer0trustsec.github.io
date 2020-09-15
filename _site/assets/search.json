@@ -29,6 +29,13 @@
     } ,
   
     {
+      "title"    : "Windows Defender official backdoor - Download files from Internet using &quot;MpCmdRun.exe&quot;.",
+      "tags"     : "windows, backdoor, download, defender",
+      "url"      : "/windowsdefender-official-backdoor-download-files-from-internet-mpcmdrun/",
+      "date"     : "2020-09-04 08:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Redteam Tip -  Google dork for .git folder exposure",
       "tags"     : "github, googledork, defense",
       "url"      : "/devops-redteam-git-config-googledork/",
