@@ -25,7 +25,7 @@ C:\ProgramData\Microsoft\Windows Defender\platform\4.18.2008.9-0\MpCmdRun.exe -u
 
 #### Demo by using CobaltStrike:
 <figure>
-<img src="/windowsdefender-official-backdoor-download-files-from-internet-mpcmdrun/cbstrike.jpeg" alt="Demo - CobaltStrike">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/windowsdefender-official-backdoor-download-files-from-internet-mpcmdrun/cbstrike.jpeg" alt="Demo - CobaltStrike">
 <figcaption>Demo - CobaltStrike</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ Commandhistoryv2 _raw="*Download*" OR _raw="*URL*" OR _raw="*url*" OR _raw="*dow
 ```
 #### BlueTeam - Splunk Detection:
 <figure>
-<img src="/windowsdefender-official-backdoor-download-files-from-internet-mpcmdrun/splunk.png" alt="Splunk hunting">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/windowsdefender-official-backdoor-download-files-from-internet-mpcmdrun/splunk.png" alt="Splunk hunting">
 <figcaption>Splunk - Hunting</figcaption>
 </figure>
 
