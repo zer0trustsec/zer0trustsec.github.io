@@ -12,7 +12,7 @@ The vulnerability stems from a flaw in a cryptographic authentication scheme use
 #### RedTeam - Offensive Tools/Scripts:
 
 <figure>
-<img src="/zerologon-domainadmin-netlogon-cryptography/Exploit.png" alt="">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/zerologon-domainadmin-netlogon-cryptography/Exploit.png" alt="">
 <figcaption> Python Exploit - ZeroLogon (CVE-2020-1472) </figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ Windows Event Correlation:
 - Failed attempts look for Event ID 5805
 
 <figure>
-<img src="/zerologon-domainadmin-netlogon-cryptography/zerologon_blueteam.png" alt="">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/zerologon-domainadmin-netlogon-cryptography/zerologon_blueteam.png" alt="">
 <figcaption> Windows Events - ZeroLogon (CVE-2020-1472) </figcaption>
 </figure>
 
