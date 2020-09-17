@@ -14,11 +14,11 @@ author:
   bio: >- # tell to the world
     Security Engineer | IR | Forensics | Threat Hunter | Security Automation |
     Personal site and blog, available at <a href="https://twitter.com/P3t3rp4rk4r" target="_blank" rel="noopener">@Twitter</a>
-  username: P3t3rp4rk3r # general username
-  github: github_username # github username
-  twitter: twitter_username # twitter username
-  facebook: facebook_username # facebook username
-  email: your-email@email.com # email adress
+  username:  # general username
+  github:  # github username
+  twitter: # twitter username
+  facebook: # facebook username
+  email:  # email adress
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
