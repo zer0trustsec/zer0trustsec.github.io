@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-15T23:47:32+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">OSINT - Email validation using forget-password functionality (Python).</title><link href="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/" rel="alternate" type="text/html" title="OSINT - Email validation using forget-password functionality (Python)." /><published>2020-09-15T19:00:00+07:00</published><updated>2020-09-15T19:00:00+07:00</updated><id>http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python</id><content type="html" xml:base="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/">&lt;p&gt;These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in lot of Threat Intel investigations.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-18T00:05:36+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><entry><title type="html">OSINT - Email validation using forget-password functionality (Python).</title><link href="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/" rel="alternate" type="text/html" title="OSINT - Email validation using forget-password functionality (Python)." /><published>2020-09-15T19:00:00+07:00</published><updated>2020-09-15T19:00:00+07:00</updated><id>http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python</id><content type="html" xml:base="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/">&lt;p&gt;These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in lot of Threat Intel investigations.&lt;/p&gt;
 
 &lt;p&gt;In this post, I would like to share one of the interesting github project which can take email address as an input and checking in top websites using “forget password” functionality.&lt;/p&gt;
 
@@ -46,22 +46,52 @@ python3 setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/HanseSecure/credgrap_ie_edge&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/HanseSecure/credgrap_ie_edge/master/credgrap_ie_edge.ps1&quot;&gt;Powershell code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="browser" /><category term="savedpasswords" /><category term="data" /><category term="collection" /><category term="redteam" /><summary type="html">In this article, I would like to share powershell code which is useful to extract saved password from Internet Explorer/Microsoft Edge browsers in Windows endpoint.</summary></entry><entry><title type="html">Zerologon - CVE-2020-1472 (POC)</title><link href="http://localhost:4000/zerologon-domainadmin-netlogon-cryptography/" rel="alternate" type="text/html" title="Zerologon - CVE-2020-1472 (POC)" /><published>2020-09-14T11:00:00+07:00</published><updated>2020-09-14T11:00:00+07:00</updated><id>http://localhost:4000/zerologon-domainadmin-netlogon-cryptography</id><content type="html" xml:base="http://localhost:4000/zerologon-domainadmin-netlogon-cryptography/">&lt;p&gt;This vulnerability allowed threat actor to foothold on your enterprise (internal) network to become a domain admin with single click.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="browser" /><category term="savedpasswords" /><category term="data" /><category term="collection" /><category term="redteam" /><summary type="html">In this article, I would like to share powershell code which is useful to extract saved password from Internet Explorer/Microsoft Edge browsers in Windows endpoint.</summary></entry><entry><title type="html">Zerologon (CVE-2020-1472) - Red|Blue Teams</title><link href="http://localhost:4000/zerologon-domainadmin-netlogon-cryptography/" rel="alternate" type="text/html" title="Zerologon (CVE-2020-1472) - Red|Blue Teams" /><published>2020-09-14T11:00:00+07:00</published><updated>2020-09-14T11:00:00+07:00</updated><id>http://localhost:4000/zerologon-domainadmin-netlogon-cryptography</id><content type="html" xml:base="http://localhost:4000/zerologon-domainadmin-netlogon-cryptography/">&lt;p&gt;This vulnerability allowed threat actor to foothold on your enterprise network to become a domain admin with single click.&lt;/p&gt;
 
 &lt;p&gt;The vulnerability stems from a flaw in a cryptographic authentication scheme used by the Netlogon Remote Protocol, which among other things can be used to update computer passwords. This flaw allows attackers to impersonate any computer, including the domain controller itself, and execute remote procedure calls on their behalf.&lt;/p&gt;
 
-&lt;h4 id=&quot;github-tool&quot;&gt;Github Tool:&lt;/h4&gt;
+&lt;h4 id=&quot;redteam---offensive-toolsscripts&quot;&gt;RedTeam - Offensive Tools/Scripts:&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/SecuraBV/CVE-2020-1472&quot;&gt;ZeroLogon- POC Script -Attacker&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/zerologon-domainadmin-netlogon-cryptography/Exploit.png&quot; alt=&quot;&quot; /&gt;
+&lt;figcaption&gt; Python Exploit - ZeroLogon (CVE-2020-1472) &lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/SecureAuthCorp/impacket&quot;&gt;Impacket&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SecuraBV/CVE-2020-1472&quot;&gt;ZeroLogon- POC Script-1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/blackarrowsec/redteam-research/tree/master/CVE-2020-1472&quot;&gt;ZeroLogon- POC Script-2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20200917&quot;&gt;ZeroLogon - Mimikatz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/BC-SECURITY/Invoke-ZeroLogon&quot;&gt;Zerologon - Powershell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;reference-article&quot;&gt;Reference Article:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.secura.com/blog/zero-logon&quot;&gt;ZeroLogon Article&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="exploit" /><category term="poc" /><category term="python" /><category term="github" /><summary type="html">This vulnerability allowed threat actor to foothold on your enterprise (internal) network to become a domain admin with single click.</summary></entry><entry><title type="html">RedTeam Tip - Change MAC address in endpoint</title><link href="http://localhost:4000/redteam-tip-change-mac-address/" rel="alternate" type="text/html" title="RedTeam Tip - Change MAC address in endpoint" /><published>2020-09-12T10:00:00+07:00</published><updated>2020-09-12T10:00:00+07:00</updated><id>http://localhost:4000/redteam-tip-change-mac-address</id><content type="html" xml:base="http://localhost:4000/redteam-tip-change-mac-address/">&lt;p&gt;In Most of the RedTeam/Pentest engagements, smart guys always change MAC address in compromise endpoints to bypass Security detection tools.&lt;/p&gt;
+&lt;h4 id=&quot;blueteam---defense&quot;&gt;BlueTeam - Defense:&lt;/h4&gt;
+
+&lt;p&gt;Windows Event Correlation:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Keep an eye our Event ID 4624 followed by a 4742.&lt;/li&gt;
+  &lt;li&gt;Failed attempts look for Event ID 5805&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/zerologon-domainadmin-netlogon-cryptography/zerologon_blueteam.png&quot; alt=&quot;&quot; /&gt;
+&lt;figcaption&gt; Windows Events - ZeroLogon (CVE-2020-1472) &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;snort-rule&quot;&gt;Snort Rule&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alert tcp any any -&amp;gt; &lt;span class=&quot;o&quot;&gt;[!&lt;/span&gt;&amp;lt;domaincontrollers to exclude here] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;49152:65535] &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;msg:&lt;span class=&quot;s2&quot;&gt;&quot;Possible DCSync Detected&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; flow:to_server,established&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; flags:PA&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; content:&lt;span class=&quot;s2&quot;&gt;&quot;|00 03 10 00 00 00|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; depth:8&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; content:&lt;span class=&quot;s2&quot;&gt;&quot;|03 00|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; distance:14&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; classtype:attempted-admin&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sid:20166316&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;other-detections&quot;&gt;Other Detections:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/blob/master/Credential%20Access/remote_pwd_reset_rpc_mimikatz_postzerologon_target_DC.evtx&quot;&gt;EVTX- Simulation Logs by @sbousseaden &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://corelight.blog/2020/09/16/detecting-zerologon-cve-2020-1472-with-zeek/&quot;&gt;Detection - Zeek&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference-articlesposts&quot;&gt;Reference Articles/Posts:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.secura.com/blog/zero-logon&quot;&gt;ZeroLogon Article&lt;/a&gt;
+&lt;a href=&quot;https://twitter.com/SBousseaden/status/1306631518618607623&quot;&gt;Twitter - @SBousseaden&lt;/a&gt;
+&lt;a href=&quot;https://twitter.com/joshlemon/status/1306487256480460805&quot;&gt;Twitter - @joshlemon&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name><email>your-email@email.com</email></author><category term="exploit" /><category term="poc" /><category term="python" /><category term="github" /><summary type="html">This vulnerability allowed threat actor to foothold on your enterprise network to become a domain admin with single click.</summary></entry><entry><title type="html">RedTeam Tip - Change MAC address in endpoint</title><link href="http://localhost:4000/redteam-tip-change-mac-address/" rel="alternate" type="text/html" title="RedTeam Tip - Change MAC address in endpoint" /><published>2020-09-12T10:00:00+07:00</published><updated>2020-09-12T10:00:00+07:00</updated><id>http://localhost:4000/redteam-tip-change-mac-address</id><content type="html" xml:base="http://localhost:4000/redteam-tip-change-mac-address/">&lt;p&gt;In Most of the RedTeam/Pentest engagements, smart guys always change MAC address in compromise endpoints to bypass Security detection tools.&lt;/p&gt;
 
 &lt;h5 id=&quot;change-mac-address---powershell-windows-os&quot;&gt;Change MAC Address - Powershell (Windows OS):&lt;/h5&gt;
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Set-NetAdapter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;Network Interface&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-MacAddress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;Random MAC Address&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
