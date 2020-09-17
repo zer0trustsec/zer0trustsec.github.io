@@ -15,7 +15,7 @@
     } ,
   
     {
-      "title"    : "Zerologon (CVE-2020-1472) - Red|Blue Teams",
+      "title"    : "Zerologon (CVE-2020-1472) &lt;-&gt; Red|Blue Teams",
       "tags"     : "exploit, poc, python, github",
       "url"      : "/zerologon-domainadmin-netlogon-cryptography/",
       "date"     : "2020-09-14 11:00:00 +0700"

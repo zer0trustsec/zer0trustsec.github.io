@@ -1,5 +1,5 @@
 ---
-title: Zerologon (CVE-2020-1472) - Red|Blue Teams
+title: Zerologon (CVE-2020-1472) <-> Red|Blue Teams
 date: 2020-09-14 11:00:00 +07:00
 tags: [exploit, poc, python, github]
 description: CVE-2020-1472
