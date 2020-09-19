@@ -25,7 +25,7 @@ author:
 url: "https://zer0trustsec.github.io" #
 baseurl:
 permalink: /:title/
-google_analytics: # leave it blank if not wish
+google_analytics: UA-178384606-1 # leave it blank if not wish
 fb_appid:
 
 # Collection setting
