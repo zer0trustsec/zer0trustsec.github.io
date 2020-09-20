@@ -1,5 +1,5 @@
 ---
-title: Blue Team - Bug Bounty Triage - Challenges & Triage Workflow for CSIRT teams
+title: BlueTeam - Bug Bounty Triage - Challenges & Triage Workflow for CSIRT teams
 date: 2020-09-20 1:00:00 +07:00
 tags: [blueteam, bugbounty, triage, workflow, bugs]
 description: Workflow for Bug Bounty Submissions
