@@ -26,7 +26,7 @@ Most of the organizations doesn't have idea on what challenges CSIRT/SOC/InfoSec
 
 - Asset management is very critical for any of the organisations. If assets information is regularly maintained/updated by Sysadmins/DevOps/Dev/App teams, our security teams can easily identify the assets / application own information.
 - Good Sync with App/Developer/Test teams. While reporting about the incident to appropriate team, we have to provide in-detailed technical information and recommendations as well. If they have any challenges while fixing the issue, security teams should have support them.  
-- Based on the critical of the bug, security teams should have SLAs with other teams while handling these incidents. It should be integrated with ticketing system.
+- Based on the criticality of the bug, security teams should maintain SLAs with other teams while handling these incidents. It should be integrated with ticketing system.
 - External perimeter critical devices/apps IP/Host/Owner information should be captured in Vulnerability Management Systems.(Qualys/Nessus etc.)
 
 ### Key players to Triage Bug Bounty Incidents:
