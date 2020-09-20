@@ -90,6 +90,6 @@ If any bug bounty incident is becomes a data breach incident, this team should h
 15. Close the incident in their Ticketing/SOAR systems once whole investigation completion.
 
 #### Best Practices
-- CSIRT/SOC/InfoSec should have knowledge on Application Security and able to understand the bug submissions. Train your analysts in AppSec space and organise Internal CTFs.
+- CSIRT/SOC/InfoSec teams should have good knowledge on Application Security and able to understand the bug submissions. Train your analysts in AppSec space and organise Internal CTFs.
 - AppSec & Dev teams should maintain good relations and give weekly sessions on AppSec space with Dev Teams.
 - Security teams always support sysadmin/devops/cloud teams while handling these type of incidents. Train them on best security & hardening techniques while configure apps/servers/etc.
