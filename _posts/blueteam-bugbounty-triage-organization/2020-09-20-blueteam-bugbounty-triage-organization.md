@@ -34,13 +34,13 @@ Most of the organizations doesn't have idea on what challenges CSIRT/SOC/InfoSec
 ##### Platform:
 These days companies are enrolling multiple bug-bounty platforms like hacker one etc.Those platforms provides the company vulnerability disclosure program information like policies, scope of the infrastructure, guidelines etc. And if any security researcher/hunter submitted bugs their platform, they will validate and informed to company’s security team.
 ##### Security Analyst:
-Each company having access to bug bounty portal access to see all bug bounty submissions. Analyst will analyse and inform this to Senior Engineers to get understand about the bug.
+Security Analyst actively monitoring alerts will do initial analysis and share their findings with Senior Engineers to get understand about the submitted bug/vulnerability.
 #####  Sr.Security Engineer (AppSec/Vulnerability Management):
-Security engineers will understand the exact vulnerability and identify affected applications. Get more information about the technical and internal owner information and schedule meeting with appropriate internal teams. (Dev/App/SysAdmin/Cloud)
+Security engineers will understand the exact vulnerability and identify affected applications. Get more information about the technical and internal owner information and schedule meeting with appropriate internal teams to close these incidents. (Dev/App/SysAdmin/Cloud)
 ##### Lead Engineer:
-If any bug is critical which can impact the production or confidential data exposure, they will co-ordinate with legal/PR/Technical teams to understand about the vulnerability or data exposure. If any old vulnerability is becomes a data-breach, they will informed to Management.
+If any bug is critical which can impact the production or confidential data exposure, they will co-ordinate with legal/PR/Technical teams to understand about the vulnerability or data exposure. If any vulnerability becomes a data-breach, they will informed to Management.
 #####  Manager:
-These people is continuously monitor the engineers how they were triaging and coordinate with other internal teams. If any gaps found, manager's should discuss with team members and get more ideas/inputs from them. Based on those inputs, they have to change their internal process documents for handling these Bug bounty incidents. If any critical escalations/data-breach linked bugs, they have to present in-front of C-suite to get their attention on these critical incidents.
+These people is continuously monitor the engineers how they were triaging and coordinate with other internal teams. If any gaps identified, manager's should discuss with team members and get more ideas/inputs from them. Based on those inputs, they have to change their internal process documents for handling these Bug bounty incidents. If any critical escalations/data-breach linked bugs, they have to present in-front of C-suite to get their attention on those critical incidents.
 ##### System Admin Team:
 Most of the companies having different offices across the world. So, local IT/Sysadmin teams were very critical while handling these type of incidents. Security teams always maintains good repo with these teams. It would be very helpful them to track down the asset/application/server owners information in their region.
 ##### Development/Application Team:
@@ -67,7 +67,7 @@ If any bug bounty incident is becomes a data breach incident, this team should h
 ##### Bug Bounty Triage - Steps:
 
 1. Bug bounty portal will send alerts to security team when researcher's submitting their bugs/vulnerabilities.
-2. Security teams will understand the impact of the bug bounty submission and prioritise accordingly (P1/P2/P3). They will create an incident in Ticketing system/ SOAR platforms.
+2. Security teams will understand the impact of the bug bounty submission and prioritise accordingly (P1/P2/P3). They will create an incident in Ticketing systems for tracking purpose.
 3. Identify if submission related data leak/data breach incident. We have to inform the Legal/Public relation teams.  
 4. Legal/PR teams will assess the impact and take necessary actions based on data privacy regulations and laws. Prepare the final report and send the data breach notification to affected users/orgs.
 5. If submitted bug related to vulnerability/exploit/source code disclosure security teams will inform the specific technical teams to get more information about the specific application hosted location/owner/IP address etc.
