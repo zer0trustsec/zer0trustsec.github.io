@@ -60,7 +60,7 @@ If any bug bounty incident is becomes a data breach incident, this team should h
 #### Bug Bounty Triage - Workflow:
 
 <figure>
-<img src="/blueteam-bugbounty-triage-organization/bbwrkflow.png" alt="Bug Bounty Workflow">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_site/blueteam-bugbounty-triage-organization/bbwrkflow.png" alt="Bug Bounty Workflow">
 <figcaption> BlueTeam - Bug Bounty Workflow </figcaption>
 </figure>
 
