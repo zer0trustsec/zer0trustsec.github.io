@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-09-20T19:21:51+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">Blue Team - Bug Bounty Triage - Challenges &amp;amp; Triage Workflow for CSIRT teams</title><link href="http://localhost:4000/blueteam-bugbounty-triage-organization/" rel="alternate" type="text/html" title="Blue Team - Bug Bounty Triage - Challenges &amp;amp; Triage Workflow for CSIRT teams" /><published>2020-09-20T01:00:00+07:00</published><updated>2020-09-20T01:00:00+07:00</updated><id>http://localhost:4000/blueteam-bugbounty-triage-organization</id><content type="html" xml:base="http://localhost:4000/blueteam-bugbounty-triage-organization/">&lt;p&gt;In these days bug bounty programs were popular and most of the organisations were enrolled to multiple bug bounty platforms or running their own vulnerability disclosure programs. While running these programs, most of the security researchers/hunters actively scanning/enumerating particular scope of company external infrastructure.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-10-06T13:34:39+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">OSINT - SynapsInt Unified Research Tool</title><link href="http://localhost:4000/osint-enumeration-synapsint-unified-research/" rel="alternate" type="text/html" title="OSINT - SynapsInt Unified Research Tool" /><published>2020-10-05T19:00:00+07:00</published><updated>2020-10-05T19:00:00+07:00</updated><id>http://localhost:4000/osint-enumeration-synapsint-unified-research</id><content type="html" xml:base="http://localhost:4000/osint-enumeration-synapsint-unified-research/">&lt;p&gt;This OSINT platform is very useful for SOC/CSIRT/InfoSec/OSINT research teams to find the juicy information about the domain or IP address. It provides lot of information like metatags, old website records, ISP, virus analysis, open ports, vulnerabilities, subdomains, location, network, WHOIS, DNS records, Web Technologies used, Pastes, Social Media accounts, Blacklisted IP and other stuff. Even it provies the leaked information or details about an email account and phone numbers data as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;website&quot;&gt;Website:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://synapsint.com/&quot;&gt;SynapsInt - An unified OSINT research tool - https://synapsint.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;osint--intel-search-based&quot;&gt;OSINT  Intel search based:&lt;/h5&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Domain
+IP Address
+Email
+Phone
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/Dinosn/status/1312640210530906112&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name></author><category term="osint" /><category term="python" /><category term="email" /><category term="domain" /><category term="phone" /><category term="recon" /><category term="validation" /><summary type="html">This OSINT platform is very useful for SOC/CSIRT/InfoSec/OSINT research teams to find the juicy information about the domain or IP address. It provides lot of information like metatags, old website records, ISP, virus analysis, open ports, vulnerabilities, subdomains, location, network, WHOIS, DNS records, Web Technologies used, Pastes, Social Media accounts, Blacklisted IP and other stuff. Even it provies the leaked information or details about an email account and phone numbers data as well.</summary></entry><entry><title type="html">BlueTeam - Bug Bounty Triage - Challenges &amp;amp; Triage Workflow for CSIRT teams</title><link href="http://localhost:4000/blueteam-bugbounty-triage-organization/" rel="alternate" type="text/html" title="BlueTeam - Bug Bounty Triage - Challenges &amp;amp; Triage Workflow for CSIRT teams" /><published>2020-09-20T01:00:00+07:00</published><updated>2020-09-20T01:00:00+07:00</updated><id>http://localhost:4000/blueteam-bugbounty-triage-organization</id><content type="html" xml:base="http://localhost:4000/blueteam-bugbounty-triage-organization/">&lt;p&gt;In these days bug bounty programs were popular and most of the organisations were enrolled to multiple bug bounty platforms or running their own vulnerability disclosure programs. While running these programs, most of the security researchers/hunters actively scanning/enumerating particular scope of company external infrastructure.&lt;/p&gt;
 
 &lt;h5 id=&quot;bug-bounty-platforms&quot;&gt;Bug bounty Platforms:&lt;/h5&gt;
 &lt;ol&gt;
@@ -23,7 +38,7 @@
 &lt;ul&gt;
   &lt;li&gt;Asset management is very critical for any of the organisations. If assets information is regularly maintained/updated by Sysadmins/DevOps/Dev/App teams, our security teams can easily identify the assets / application own information.&lt;/li&gt;
   &lt;li&gt;Good Sync with App/Developer/Test teams. While reporting about the incident to appropriate team, we have to provide in-detailed technical information and recommendations as well. If they have any challenges while fixing the issue, security teams should have support them.&lt;/li&gt;
-  &lt;li&gt;Based on the critical of the bug, security teams should have SLAs with other teams while handling these incidents. It should be integrated with ticketing system.&lt;/li&gt;
+  &lt;li&gt;Based on the criticality of the bug, security teams should maintain SLAs with other teams while handling these incidents. It should be integrated with ticketing system.&lt;/li&gt;
   &lt;li&gt;External perimeter critical devices/apps IP/Host/Owner information should be captured in Vulnerability Management Systems.(Qualys/Nessus etc.)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -32,13 +47,13 @@
 &lt;h5 id=&quot;platform&quot;&gt;Platform:&lt;/h5&gt;
 &lt;p&gt;These days companies are enrolling multiple bug-bounty platforms like hacker one etc.Those platforms provides the company vulnerability disclosure program information like policies, scope of the infrastructure, guidelines etc. And if any security researcher/hunter submitted bugs their platform, they will validate and informed to company’s security team.&lt;/p&gt;
 &lt;h5 id=&quot;security-analyst&quot;&gt;Security Analyst:&lt;/h5&gt;
-&lt;p&gt;Each company having access to bug bounty portal access to see all bug bounty submissions. Analyst will analyse and inform this to Senior Engineers to get understand about the bug.&lt;/p&gt;
+&lt;p&gt;Security Analyst actively monitoring alerts will do initial analysis and share their findings with Senior Engineers to get understand about the submitted bug/vulnerability.&lt;/p&gt;
 &lt;h5 id=&quot;srsecurity-engineer-appsecvulnerability-management&quot;&gt;Sr.Security Engineer (AppSec/Vulnerability Management):&lt;/h5&gt;
-&lt;p&gt;Security engineers will understand the exact vulnerability and identify affected applications. Get more information about the technical and internal owner information and schedule meeting with appropriate internal teams. (Dev/App/SysAdmin/Cloud)&lt;/p&gt;
+&lt;p&gt;Security engineers will understand the exact vulnerability and identify affected applications. Get more information about the technical and internal owner information and schedule meeting with appropriate internal teams to close these incidents. (Dev/App/SysAdmin/Cloud)&lt;/p&gt;
 &lt;h5 id=&quot;lead-engineer&quot;&gt;Lead Engineer:&lt;/h5&gt;
-&lt;p&gt;If any bug is critical which can impact the production or confidential data exposure, they will co-ordinate with legal/PR/Technical teams to understand about the vulnerability or data exposure. If any old vulnerability is becomes a data-breach, they will informed to Management.&lt;/p&gt;
+&lt;p&gt;If any bug is critical which can impact the production or confidential data exposure, they will co-ordinate with legal/PR/Technical teams to understand about the vulnerability or data exposure. If any vulnerability becomes a data-breach, they will informed to Management.&lt;/p&gt;
 &lt;h5 id=&quot;manager&quot;&gt;Manager:&lt;/h5&gt;
-&lt;p&gt;These people is continuously monitor the engineers how they were triaging and coordinate with other internal teams. If any gaps found, manager’s should discuss with team members and get more ideas/inputs from them. Based on those inputs, they have to change their internal process documents for handling these Bug bounty incidents. If any critical escalations/data-breach linked bugs, they have to present in-front of C-suite to get their attention on these critical incidents.&lt;/p&gt;
+&lt;p&gt;These people is continuously monitor the engineers how they were triaging and coordinate with other internal teams. If any gaps identified, manager’s should discuss with team members and get more ideas/inputs from them. Based on those inputs, they have to change their internal process documents for handling these Bug bounty incidents. If any critical escalations/data-breach linked bugs, they have to present in-front of C-suite to get their attention on those critical incidents.&lt;/p&gt;
 &lt;h5 id=&quot;system-admin-team&quot;&gt;System Admin Team:&lt;/h5&gt;
 &lt;p&gt;Most of the companies having different offices across the world. So, local IT/Sysadmin teams were very critical while handling these type of incidents. Security teams always maintains good repo with these teams. It would be very helpful them to track down the asset/application/server owners information in their region.&lt;/p&gt;
 &lt;h5 id=&quot;developmentapplication-team&quot;&gt;Development/Application Team:&lt;/h5&gt;
@@ -67,7 +82,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;Bug bounty portal will send alerts to security team when researcher’s submitting their bugs/vulnerabilities.&lt;/li&gt;
-  &lt;li&gt;Security teams will understand the impact of the bug bounty submission and prioritise accordingly (P1/P2/P3). They will create an incident in Ticketing system/ SOAR platforms.&lt;/li&gt;
+  &lt;li&gt;Security teams will understand the impact of the bug bounty submission and prioritise accordingly (P1/P2/P3). They will create an incident in Ticketing systems for tracking purpose.&lt;/li&gt;
   &lt;li&gt;Identify if submission related data leak/data breach incident. We have to inform the Legal/Public relation teams.&lt;/li&gt;
   &lt;li&gt;Legal/PR teams will assess the impact and take necessary actions based on data privacy regulations and laws. Prepare the final report and send the data breach notification to affected users/orgs.&lt;/li&gt;
   &lt;li&gt;If submitted bug related to vulnerability/exploit/source code disclosure security teams will inform the specific technical teams to get more information about the specific application hosted location/owner/IP address etc.&lt;/li&gt;
@@ -92,7 +107,7 @@
 
 &lt;h4 id=&quot;best-practices&quot;&gt;Best Practices&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;CSIRT/SOC/InfoSec should have knowledge on Application Security and able to understand the bug submissions. Train your analysts in AppSec space and organise Internal CTFs.&lt;/li&gt;
+  &lt;li&gt;CSIRT/SOC/InfoSec teams should have good knowledge on Application Security and able to understand the bug submissions. Train your analysts in AppSec space and organise Internal CTFs.&lt;/li&gt;
   &lt;li&gt;AppSec &amp;amp; Dev teams should maintain good relations and give weekly sessions on AppSec space with Dev Teams.&lt;/li&gt;
   &lt;li&gt;Security teams always support sysadmin/devops/cloud teams while handling these type of incidents. Train them on best security &amp;amp; hardening techniques while configure apps/servers/etc.&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Santhosh Baswa</name></author><category term="blueteam" /><category term="bugbounty" /><category term="triage" /><category term="workflow" /><category term="bugs" /><summary type="html">In these days bug bounty programs were popular and most of the organisations were enrolled to multiple bug bounty platforms or running their own vulnerability disclosure programs. While running these programs, most of the security researchers/hunters actively scanning/enumerating particular scope of company external infrastructure.</summary></entry><entry><title type="html">OSINT - Email validation using forget-password functionality (Python).</title><link href="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/" rel="alternate" type="text/html" title="OSINT - Email validation using forget-password functionality (Python)." /><published>2020-09-15T19:00:00+07:00</published><updated>2020-09-15T19:00:00+07:00</updated><id>http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python</id><content type="html" xml:base="http://localhost:4000/osint-email-validation-using-forgetpassword-function-using-python/">&lt;p&gt;These days most of OSINT guys were doing their investigations on humans/unknown emails data. Sometimes threat actor/attackers also do mistakes while creating accounts in multiple platforms. We have to take those mistakes as an advantage in our investigations, so most of the email addresses will be unknown in lot of Threat Intel investigations.&lt;/p&gt;
@@ -288,22 +303,4 @@ Deny from all
 
 &lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/robertdavidgraham/masscan&quot;&gt;Massscan&lt;/a&gt;
-&lt;a href=&quot;https://gist.github.com/rayterrill/188409e5e4cec6895d1939e155fbf3ed&quot;&gt;Powershell code&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="redteam" /><category term="massscan" /><category term="ticketbleed" /><summary type="html">This post is useful for Red teamers / CyberOps / Penetration testers to use Mass Scan tool to identify the Ticketbleed vulnerable servers in whole internet.</summary></entry><entry><title type="html">Is your saved passwords were safe in browser?</title><link href="http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy/" rel="alternate" type="text/html" title="Is your saved passwords were safe in browser?" /><published>2016-11-24T09:00:00+07:00</published><updated>2016-11-24T09:00:00+07:00</updated><id>http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy</id><content type="html" xml:base="http://localhost:4000/stealpasswords-modern-browsers-autofill-privacy/">&lt;p&gt;In this article, I would like to share the server-side source code for stealing auto-fill saved passwords from modern browsers. It might be useful for Penetration testers or Red Teams.&lt;/p&gt;
-
-&lt;h4 id=&quot;demo-steps&quot;&gt;Demo Steps:&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;User’s should enter the dummy username/password from available form.&lt;/li&gt;
-  &lt;li&gt;Save the password in browser&lt;/li&gt;
-  &lt;li&gt;XSS code technique will steal password from auto-filled password field.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;server-side-source-code&quot;&gt;Server side-source code:&lt;/h5&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/stealpasswords-modern-browsers-autofill-privacy/code.png&quot; alt=&quot;Server-side source code&quot; /&gt;
-&lt;figcaption&gt;PHP code&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;demo-website&quot;&gt;Demo Website&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://133.242.134.241/exploit/password_manager.php&quot;&gt; Public hosted Attacker Server - May takedown in future&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="browser" /><category term="access" /><category term="data" /><category term="collection" /><category term="redteam" /><summary type="html">In this article, I would like to share the server-side source code for stealing auto-fill saved passwords from modern browsers. It might be useful for Penetration testers or Red Teams.</summary></entry></feed>
+&lt;a href=&quot;https://gist.github.com/rayterrill/188409e5e4cec6895d1939e155fbf3ed&quot;&gt;Powershell code&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="redteam" /><category term="massscan" /><category term="ticketbleed" /><summary type="html">This post is useful for Red teamers / CyberOps / Penetration testers to use Mass Scan tool to identify the Ticketbleed vulnerable servers in whole internet.</summary></entry></feed>

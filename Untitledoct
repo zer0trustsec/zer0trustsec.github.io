@@ -1,0 +1,78 @@
+Opened for
+AJ
+Anese Jacobs
+Customer Management Specialist_Modern Trade
+Email
+Anese.Jacobs@unilever.com
+Mobile phone
++1 (201) 4065931
+Location
+Englewood Cliffs -700 Sylvan
+Location.Country
+United States of America
+Language
+English
+Work Note Template :
+
+Caller’s Email address - Anese.Jacobs@unilever.com
+
+Affected User Email address - Anese.Jacobs@unilever.com
+
+Affected User Contact Number - +1 (201) 4065931
+
+Summary of the Issue - user want to unblock the extenal email - edone, Lisamarie <lpedone@bjs.com>
+
+KB Article Followed - KBUNL004256
+
+Aternity Tool Used (Yes/No/NA) - NA
+
+Troubleshooting Steps & Other information -
+>>team , please do the needful!
+
+Hi Team,
+
+It's been around 7 months, I didn't get any response from Ecommerce team. Hope everything is sorted out now.
+
+Could you please respond to my query below? (Following up my old email)
+
+I planned my honeymoon to the Maldives and I booked my tickets from Banglore to Male  (Two-way Journey). Due to COVID-19 emergency situation, Air India cancelled those flights.
+I need to get my refund on my bookings (The whole ticket cost is around 30k+. that's why I'm worrying a lot.)  Could you please help me with this?
+
+Hi Team, 
+
+It's been around 7 months, I didn't get any response from Ecommerce team. Hope everything is sorted out now. 
+
+Could you please respond to my query below? (Following up my old email) 
+
+I planned my honeymoon to the Maldives and I booked my tickets from Banglore to Male  (Two-way Journey). Due to COVID-19 emergency situation, Air India cancelled those flights.
+I need to get my refund on my bookings (The whole ticket cost is around 30k+. that's why I'm worrying a lot.)  Could you please help me with this? 
+
+The alert “Defender ATP Incident Medium containing Windows Defender suspicious activity alert” was triggered for the IP 145.17.186.228 identified as part of Iran-USA Tensions IOC_IP.
+Details:
+Username - Tomasz.Twarowski
+Log Source- Defender ATP_New
+DefenderATP_Alert_ID_API - https://securitycenter.windows.com/alert/da637357493365135227_-669703212
+DefenderATP_HostID - fe2ee5157c8086fdc3f894d3cd4328cd59ca0686
+DefenderATP_IncidentName- Iran-USA Tensions IOC_IP
+Defender_Hostname- ewal10jx9ymf2
+DefenderATP_Incident_InvestigationState- UnsupportedAlertType
+Defender_Source- CustomerTI
+
+File Name: chrome.exe
+Image file path- C:\Users\Sukrit.Sodhani\AppData\Local\Google\Chrome\Application\chrome.exe
+Image file SHA1- 943a2d62a7ab288b239dc690aeaf75a67155c642
+Image file creation time- Jun 3, 2020, 8:06:48 AM
+
+next steps:
+Investigation in progress.
+
+
+The Offense "DefenderATP_NA_NA_Incident_Medium_Oct20" was triggered from log source Defender ATP_New and 2 events were seen contributing to the offense.
+We see offense with Incident name "Iran-USA Tensions IOC_IP' was triggered for the host ewal10jx9ymf2.s2.ms.unilever.com. The investigation state is seen to be "UnsupportedAlertType".
+The severity of the alert is seen to be medium and user involved is Tomasz.Twarowski.
+The incident category is seen to be SuspiciousActivity.
+We see an outbound connection from 192.168.0.100:6493 to 188.120.247.151:443. The resolved domain is www.cpolinfo.com.
+We see that chrome.exe successfully established connection with www.cpolinfo.com (188.120.247.151) using port 443
+The host is seen to have medium risk and exposure level.
+We see that ZSATunnel.exe accepted connection from 188.120.247.151:6493.
+The domain and IP were found to be safe in varius OSINT.

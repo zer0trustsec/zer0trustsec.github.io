@@ -1,0 +1,17 @@
+I"î<p>This OSINT platform is very useful for SOC/CSIRT/InfoSec/OSINT research teams to find the juicy information about the domain or IP address. It provides lot of information like metatags, old website records, ISP, virus analysis, open ports, vulnerabilities, subdomains, location, network, WHOIS, DNS records, Web Technologies used, Pastes, Social Media accounts, Blacklisted IP and other stuff. Even it provies the leaked information or details about an email account and phone numbers data as well.</p>
+
+<h4 id="website">Website:</h4>
+<p><a href="https://synapsint.com/">SynapsInt - An unified OSINT research tool - https://synapsint.com/</a></p>
+
+<h5 id="osint--intel-search-based">OSINT  Intel search based:</h5>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Domain
+IP Address
+Email
+Phone
+</code></pre></div></div>
+
+<h4 id="references">References</h4>
+<ul>
+  <li><a href="https://twitter.com/Dinosn/status/1312640210530906112">Twitter</a></li>
+</ul>
+:ET

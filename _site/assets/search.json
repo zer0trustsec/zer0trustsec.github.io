@@ -1,7 +1,14 @@
 [
   
     {
-      "title"    : "Blue Team - Bug Bounty Triage - Challenges &amp; Triage Workflow for CSIRT teams",
+      "title"    : "OSINT - SynapsInt Unified Research Tool",
+      "tags"     : "osint, python, email, domain, phone, recon, validation",
+      "url"      : "/osint-enumeration-synapsint-unified-research/",
+      "date"     : "2020-10-05 19:00:00 +0700"
+    } ,
+  
+    {
+      "title"    : "BlueTeam - Bug Bounty Triage - Challenges &amp; Triage Workflow for CSIRT teams",
       "tags"     : "blueteam, bugbounty, triage, workflow, bugs",
       "url"      : "/blueteam-bugbounty-triage-organization/",
       "date"     : "2020-09-20 01:00:00 +0700"
