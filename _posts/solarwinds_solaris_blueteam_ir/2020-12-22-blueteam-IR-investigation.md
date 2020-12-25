@@ -131,7 +131,7 @@ search index=<bro_logs_index> 54.193.127.66 OR 54.215.192.52 OR 34.203.203.23 OR
 
 ### MindMap - Solarigate/Sunburst Supply chain Attack
 <figure>
-<img src="./SOLORIGATE_SUNBURST.png" alt="">
+<img src="https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/solarwinds_solaris_blueteam_ir/SOLORIGATE_SUNBURST.png" alt="">
 <figcaption> Solarigate/Sunburst - Mindmap </figcaption>
 </figure>
 
