@@ -1,5 +1,5 @@
 ---
-title: Solarigate/Sunburst Incident Response & Investigation/Hunting for CSIRT/SOC/InfoSec Teams
+title: Solarigate/Sunburst Incident Response Playbook & Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams
 date: 2020-12-22 4:00:00 +07:00
 tags: [blueteam, solarwinds, triage,ir, investigation,forensics]
 description: Solarigate/Sunburst IR plan & Investigation Strategy
