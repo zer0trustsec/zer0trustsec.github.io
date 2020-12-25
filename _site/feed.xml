@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-10-06T13:34:39+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">OSINT - SynapsInt Unified Research Tool</title><link href="http://localhost:4000/osint-enumeration-synapsint-unified-research/" rel="alternate" type="text/html" title="OSINT - SynapsInt Unified Research Tool" /><published>2020-10-05T19:00:00+07:00</published><updated>2020-10-05T19:00:00+07:00</updated><id>http://localhost:4000/osint-enumeration-synapsint-unified-research</id><content type="html" xml:base="http://localhost:4000/osint-enumeration-synapsint-unified-research/">&lt;p&gt;This OSINT platform is very useful for SOC/CSIRT/InfoSec/OSINT research teams to find the juicy information about the domain or IP address. It provides lot of information like metatags, old website records, ISP, virus analysis, open ports, vulnerabilities, subdomains, location, network, WHOIS, DNS records, Web Technologies used, Pastes, Social Media accounts, Blacklisted IP and other stuff. Even it provies the leaked information or details about an email account and phone numbers data as well.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-12-26T01:09:00+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">Solarigate/Sunburst Incident Response &amp;amp; Investigation/Hunting for CSIRT/SOC/InfoSec Teams</title><link href="http://localhost:4000/blueteam-IR-investigation/" rel="alternate" type="text/html" title="Solarigate/Sunburst Incident Response &amp;amp; Investigation/Hunting for CSIRT/SOC/InfoSec Teams" /><published>2020-12-22T04:00:00+07:00</published><updated>2020-12-22T04:00:00+07:00</updated><id>http://localhost:4000/blueteam-IR-investigation</id><content type="html" xml:base="http://localhost:4000/blueteam-IR-investigation/">&lt;p&gt;Last few days, Solarigate aka Sunburst zero-day backdoor is being very popular in Infosec world. There was lot of enterprise/govt/nationalagencies/organisations were affected by this backdoor and most of the CSIRT/SOC/SecOps teams were very busy with handling related to solarwinds backdoor incidents.&lt;/p&gt;
+
+&lt;p&gt;In this article, I would like to share some IR tips/experiences/plan and threat model on this incident and most of organisations and teams were looking for proper IR plan and investigation steps with proper remediation.&lt;/p&gt;
+
+&lt;p&gt;Most of the smart/advanced SecOps teams not wait for SIEM/Threat Intel hits/alerts to handle the these type of incidents. They will start hunting in their environment and create a plan &amp;amp; execute threat hunting hypothesis on these type of emerging threats.&lt;/p&gt;
+
+&lt;h3 id=&quot;threat-hunting-assumptions-solarigatesunburst&quot;&gt;Threat Hunting Assumptions: Solarigate/Sunburst&lt;/h3&gt;
+
+&lt;p&gt;Let’s assume below of threat hunting hypothesis in your environment.&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. Identify the specific vulnerable backdoor package identification &amp;amp; timeline. (Ex:Aug 2019 onwards)
+  2. Check whether specific vulnerable servers/application logs covered/stored in your SIEM/Logging solutions.
+  3. Threat actor is compromised external faced solarwinds Orion servers and gather privileged level access like administrative / user accounts.
+  4. Threat actor is able communicate via C2 channel to Vulnerable servers and exfiltration activity was happend.
+  5. There was no malicious activity was identified on specific vulnerable servers (not matching with any IOCs/detections but that specific server is vulnerable).
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;incident-response-plan-and-playbookworkflow-&quot;&gt;Incident Response Plan and Playbook/Workflow :&lt;/h3&gt;
+
+&lt;h4 id=&quot;notifydetect&quot;&gt;Notify/Detect:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;If any existing IOCs/hash/detections was triggered in your environment, identify the affected servers and user accounts.&lt;/li&gt;
+  &lt;li&gt;Update your security products with latest Threat Intel feed on specific threat adversary.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;confirmation&quot;&gt;Confirmation:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;In this adversary is mainly focusing on supply chain attacks, we don’t conclude based on our detections.
+Because we don’t know how those IOC/IOAs were entered into your environment.&lt;/li&gt;
+  &lt;li&gt;So, before that communicate with Vulnerability Management/Asset Management teams and get confirmation about the specific affected devices/servers/VMs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;investigation&quot;&gt;Investigation:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;In any IR incident investigation, we have to look at different possible places. So, we should look at multiple log sources and different patterns.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;different-scenarios&quot;&gt;Different Scenarios:&lt;/h5&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    1. Solarwinds Orion server compromise
+    2. Gather privileged local/Domain connected administrator accounts (from Compromised Solarwinds Orion Servers)
+    3. Access other resources using compromised AD connected accounts get access to Cloud/On-prime resources
+    4. Compromise email accounts and change configs/Inbox rules.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;steps&quot;&gt;Steps:&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;Take snapshot/image the compromised/vulnerable Solarwinds Orion server.&lt;/li&gt;
+  &lt;li&gt;Apply yara rules/hashing using multiple forensic/RE tools.&lt;/li&gt;
+  &lt;li&gt;Finalise the timeline and shortlist the log sources where we were going to investigate in SIEM/3rd party Products.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;adminuser-account-level-compromised-usersassociated-with-solarwinds-orion-serversvms&quot;&gt;Admin/User Account Level: (Compromised Users/Associated with Solarwinds Orion Servers/VMs)&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;List out all of the user accounts used in Solarwinds Orion servers &amp;amp; monitor agent installed VMs/Systems.&lt;/li&gt;
+  &lt;li&gt;Get the all relevant users login activity details ( Success/Failure events)
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    i. Success events by Accountwise ( Sorting Order - Low to High)
+    ii. Failed events by Accountwise ( Sorting Order - Low to High)
+    iii. Newly created accounts by Serverwise ( Specified timeline)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Once you identify the compromised accounts, look at those user account activities on perimeter level. (Cloud/AD/VPN logs etc.)&lt;/li&gt;
+  &lt;li&gt;Look at the compromised accounts email box configurations (Login activity/Email communications/Permissions/Inbox Rules etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;network-level-brofirewallzeekother-products&quot;&gt;Network Level: (Bro/Firewall/Zeek/Other Products)&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;Check whether any C2/IP/domain (Solarigate/Sunburst IOCs) communication/hits in the environment.&lt;/li&gt;
+  &lt;li&gt;Check whether vulnerable/compromised servers/VMs is communicate with internal systems. ( Specific Timeline)&lt;/li&gt;
+  &lt;li&gt;Check compromised accounts activities over network. (User Login hits/User session/C2 beaconing etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;endpoint-level-edrsysmonwinevents-etc&quot;&gt;Endpoint Level: (EDR/Sysmon/Winevents etc)&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;Check specific backdoor DLL files available in Solarwinds Orion servers/VMs.&lt;/li&gt;
+  &lt;li&gt;Hunt using IOA/Filenames/Hashes/Filesize/SignedCertificateInfo across multiple endpoint/servers using EDR solutions.&lt;/li&gt;
+  &lt;li&gt;Digging out if any suspicious processes/activity in Solarwinds Orion server/VMs. (Registry Changes/Suspicious Process/Backdoor DLL/Startup etc.)&lt;/li&gt;
+  &lt;li&gt;Change all user account passwords and look at the permissions/configurations in Solarwinds Orion server/VMs.&lt;/li&gt;
+  &lt;li&gt;Look at the EDR/Sysmon suspicious old incidents in Specific timeline. (Linking Incidents/Mapping with MITRE)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;containment&quot;&gt;Containment:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Isolate the vulnerable/infected SolarWinds Orion servers.
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  (i). Look at Digital Forensic team investigation report and add those suspected hashes/files in  block/monitor mode.
+  (ii). If you have existing EDR solution please isolate at firewall level (Only server can access EDR console)
+  (iii). After forensic imaging and investigation shutdown the servers.  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Look at other service accounts which will access other applications, investigate those application logs take necessary actions. (SQL/SNMP/WMI etc.)&lt;/li&gt;
+  &lt;li&gt;Implement IDPS/proxy level defenses in your environment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;eradication&quot;&gt;Eradication:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most of the steps were covered in Containment phase.&lt;/li&gt;
+  &lt;li&gt;Prepare a good plan for securing the user account/ server / network level config management and capture all logs in internal/external perimeter devices/servers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;recovery&quot;&gt;Recovery:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Backup the server configs/data.&lt;/li&gt;
+  &lt;li&gt;Design a process for secure configure golden image and Rebuild the all affected servers/VMs.&lt;/li&gt;
+  &lt;li&gt;Install updated version of Solarwinds Orion.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;siem-hunting-queries&quot;&gt;SIEM Hunting Queries&lt;/h3&gt;
+
+&lt;h4 id=&quot;splunk&quot;&gt;Splunk&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Search for Event code 4624 (any logins to the Solarwinds server) find out credentials that could be compromised.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;search &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;windows_events_index&amp;gt; solarwinds&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;EventCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4624&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Workstation_Name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;solarwinds&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+| stats count min&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; AS first_time max&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; AS last_time by Workstation_Name Security_ID Logon_Type
+| convert &lt;span class=&quot;nv&quot;&gt;timeformat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;%d/%m/%Y %H:%M:%S&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt; ctime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| &lt;span class=&quot;nb&quot;&gt;sort &lt;/span&gt;count
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Check Bro for any Solarwinds DNS lookups - find any unknown or test instances of Solarwinds.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;search &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;bro_logs index&amp;gt;_index &lt;span class=&quot;nv&quot;&gt;sourcetype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bro_dns &lt;span class=&quot;nv&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;solarwinds.com&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+| rex &lt;span class=&quot;nv&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;_raw &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;^&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;+&lt;span class=&quot;se&quot;&gt;\.\d&lt;/span&gt;+&lt;span class=&quot;se&quot;&gt;\s\S&lt;/span&gt;+&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)(&lt;/span&gt;?&amp;lt;src_ip&amp;gt;&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;+&lt;span class=&quot;se&quot;&gt;\.\d&lt;/span&gt;+&lt;span class=&quot;se&quot;&gt;\.\d&lt;/span&gt;+&lt;span class=&quot;se&quot;&gt;\.\d&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+| search src_ip IN &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;solarwinds_ip&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;solarwinds_ip&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;solarwinds_ip&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;solarwinds_ip&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Check for any historical HTTP/S traffic outbound to published IOCs with any applicable http/s logs
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;search &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;bro_logs index&amp;gt;_index deftsecurity.com OR freescanonline.com OR thedoccloud.com OR thedoccloud.com OR websitetheme.com OR highdatabase.com OR incomeupdate.com OR databasegalore.com OR panhardware.com OR zupertech.com OR appsync-api.eu-west-1.avsvmcloud.com OR appsync-api.eu-west-1.avsvmcloud.com OR appsync-api.us-east-2.avsvmcloud.com OR appsync-api.us-west-2.avsvmcloud.com OR appsync-api.us-west-2.avsvmcloud.com OR appsync-api.eu-west-1.avsvmcloud.com | stats count earliest&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; AS Earliest, latest&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; AS Latest by sourcetype &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;host | &lt;span class=&quot;nb&quot;&gt;eval &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Earliest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;strftime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Earliest,&lt;span class=&quot;s2&quot;&gt;&quot;%+&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;eval &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Latest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;strftime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Latest,&lt;span class=&quot;s2&quot;&gt;&quot;%+&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; - count
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Check for any historical IP traffic outbound to the published IOCs with any applicable logs
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;search &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;bro_logs_index&amp;gt; 54.193.127.66 OR 54.215.192.52 OR 34.203.203.23 OR 139.99.115.204 OR 5.252.177.25 OR 204.188.205.176 OR 51.89.125.18 OR 167.114.213.199 OR 13.59.205.66 OR 5.252.177.21 | stats count earliest&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; AS Earliest, latest&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_time&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; AS Latest by index sourcetype &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;host | &lt;span class=&quot;nb&quot;&gt;eval &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Earliest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;strftime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Earliest,&lt;span class=&quot;s2&quot;&gt;&quot;%+&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;eval &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Latest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;strftime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Latest,&lt;span class=&quot;s2&quot;&gt;&quot;%+&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; - count
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;other-references-azure-sentinelazure-adyaraattckzeek-etc&quot;&gt;Other References (Azure Sentinel/Azure AD/Yara/ATT&amp;amp;CK/Zeek etc.)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techcommunity.microsoft.com/t5/azure-sentinel/solarwinds-post-compromise-hunting-with-azure-sentinel/ba-p/1995095&quot;&gt;Azure Sentinel - Hunting &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techcommunity.microsoft.com/t5/azure-active-directory-identity/azure-ad-workbook-to-help-you-assess-solorigate-risk/ba-p/2010718&quot;&gt;Azure AD Monitor - Hunting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/fireeye/red_team_tool_countermeasures&quot;&gt;Yara Rules - Hunting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://corelight.blog/2020/12/22/detecting-sunburst-solarigate-activity-in-retrospect-with-zeek-a-practical-example/&quot;&gt;Zeek - Hunting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/mitre-attack/identifying-unc2452-related-techniques-9f7b6c7f3714&quot;&gt;MITRE ATT&amp;amp;CK - Mapping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mindmap---solarigatesunburst-supply-chain-attack&quot;&gt;MindMap - Solarigate/Sunburst Supply chain Attack&lt;/h3&gt;
+&lt;figure&gt;
+&lt;img src=&quot;./SOLORIGATE_SUNBURST.png&quot; alt=&quot;&quot; /&gt;
+&lt;figcaption&gt; Solarigate/Sunburst - Mindmap &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;reference-articles&quot;&gt;Reference Articles:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sophos-cybersecurity/solarwinds-threathunt&quot;&gt;Sophos - Threat Hunting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.trustedsec.com/blog/solarwinds-backdoor-sunburst-incident-response-playbook/&quot;&gt;TrustedSec - Article&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html&quot;&gt;Fireeye&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Santhosh Baswa</name></author><category term="blueteam" /><category term="solarwinds" /><category term="triage" /><category term="ir" /><category term="investigation" /><category term="forensics" /><summary type="html">Last few days, Solarigate aka Sunburst zero-day backdoor is being very popular in Infosec world. There was lot of enterprise/govt/nationalagencies/organisations were affected by this backdoor and most of the CSIRT/SOC/SecOps teams were very busy with handling related to solarwinds backdoor incidents.</summary></entry><entry><title type="html">OSINT - SynapsInt Unified Research Tool</title><link href="http://localhost:4000/osint-enumeration-synapsint-unified-research/" rel="alternate" type="text/html" title="OSINT - SynapsInt Unified Research Tool" /><published>2020-10-05T19:00:00+07:00</published><updated>2020-10-05T19:00:00+07:00</updated><id>http://localhost:4000/osint-enumeration-synapsint-unified-research</id><content type="html" xml:base="http://localhost:4000/osint-enumeration-synapsint-unified-research/">&lt;p&gt;This OSINT platform is very useful for SOC/CSIRT/InfoSec/OSINT research teams to find the juicy information about the domain or IP address. It provides lot of information like metatags, old website records, ISP, virus analysis, open ports, vulnerabilities, subdomains, location, network, WHOIS, DNS records, Web Technologies used, Pastes, Social Media accounts, Blacklisted IP and other stuff. Even it provies the leaked information or details about an email account and phone numbers data as well.&lt;/p&gt;
 
 &lt;h4 id=&quot;website&quot;&gt;Website:&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://synapsint.com/&quot;&gt;SynapsInt - An unified OSINT research tool - https://synapsint.com/&lt;/a&gt;&lt;/p&gt;
@@ -288,19 +441,4 @@ Deny from all
 &lt;/figure&gt;
 
 &lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rapid7/metasploit-framework&quot;&gt;Metasploit&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="Devops" /><category term="Security" /><category term="Metasploit" /><summary type="html">Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</summary></entry><entry><title type="html">Ticketbleed - Scan whole internet using massscan tool</title><link href="http://localhost:4000/scan-whole-internet-ticketbleed/" rel="alternate" type="text/html" title="Ticketbleed - Scan whole internet using massscan tool" /><published>2017-02-10T19:00:00+07:00</published><updated>2017-02-10T19:00:00+07:00</updated><id>http://localhost:4000/scan-whole-internet-ticketbleed</id><content type="html" xml:base="http://localhost:4000/scan-whole-internet-ticketbleed/">&lt;p&gt;This post is useful for Red teamers / CyberOps / Penetration testers to use Mass Scan tool to identify the Ticketbleed vulnerable servers in whole internet.&lt;/p&gt;
-
-&lt;h4 id=&quot;bash-command&quot;&gt;Bash Command:&lt;/h4&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;/bin/masscan 0.0.0./0 &lt;span class=&quot;nt&quot;&gt;-p443&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--source-ip&lt;/span&gt; xxx.xxx.xxx.xx - xxx.xxx.xxx.xx &lt;span class=&quot;nt&quot;&gt;--rate&lt;/span&gt; 250000 &lt;span class=&quot;nt&quot;&gt;-oB&lt;/span&gt; ticketbleed &lt;span class=&quot;nt&quot;&gt;--ticketbleed&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;terminal-output&quot;&gt;Terminal Output:&lt;/h5&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/scan-whole-internet-ticketbleed/terminal.png&quot; alt=&quot;Terminal command output&quot; /&gt;
-&lt;figcaption&gt; Terminal Command &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/robertdavidgraham/masscan&quot;&gt;Massscan&lt;/a&gt;
-&lt;a href=&quot;https://gist.github.com/rayterrill/188409e5e4cec6895d1939e155fbf3ed&quot;&gt;Powershell code&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="redteam" /><category term="massscan" /><category term="ticketbleed" /><summary type="html">This post is useful for Red teamers / CyberOps / Penetration testers to use Mass Scan tool to identify the Ticketbleed vulnerable servers in whole internet.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://github.com/rapid7/metasploit-framework&quot;&gt;Metasploit&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="Devops" /><category term="Security" /><category term="Metasploit" /><summary type="html">Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</summary></entry></feed>

@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Solarigate/Sunburst Incident Response &amp; Investigation/Hunting for CSIRT/SOC/InfoSec Teams",
+      "tags"     : "blueteam, solarwinds, triage, ir, investigation, forensics",
+      "url"      : "/blueteam-IR-investigation/",
+      "date"     : "2020-12-22 04:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "OSINT - SynapsInt Unified Research Tool",
       "tags"     : "osint, python, email, domain, phone, recon, validation",
       "url"      : "/osint-enumeration-synapsint-unified-research/",
