@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Bug Bounty Tips - Twitter feed",
+      "tags"     : "bugbounty, tricks, tips, twitter",
+      "url"      : "/bugbountytips-from-twitter/",
+      "date"     : "2020-12-29 01:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Solarigate/Sunburst Incident Response Playbook &amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams",
       "tags"     : "blueteam, solarwinds, triage, ir, investigation, forensics",
       "url"      : "/blueteam_solarigate_sunburst_ir_playbook_investigation/",

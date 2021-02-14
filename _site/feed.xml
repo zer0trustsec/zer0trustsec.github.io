@@ -1,4 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-12-26T01:41:07+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams</title><link href="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/" rel="alternate" type="text/html" title="Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams" /><published>2020-12-22T04:00:00+07:00</published><updated>2020-12-22T04:00:00+07:00</updated><id>http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation</id><content type="html" xml:base="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/">&lt;p&gt;Last few days, Solarigate aka Sunburst zero-day backdoor is being very popular in Infosec world. There was lot of enterprise/govt/nationalagencies/organisations were affected by this backdoor and most of the CSIRT/SOC/SecOps teams were very busy with handling related to solarwinds backdoor incidents.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-12-29T22:23:07+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">Bug Bounty Tips - Twitter feed</title><link href="http://localhost:4000/bugbountytips-from-twitter/" rel="alternate" type="text/html" title="Bug Bounty Tips - Twitter feed" /><published>2020-12-29T01:00:00+07:00</published><updated>2020-12-29T01:00:00+07:00</updated><id>http://localhost:4000/bugbountytips-from-twitter</id><content type="html" xml:base="http://localhost:4000/bugbountytips-from-twitter/">&lt;p&gt;In these days lot of bug bounty hunters were sharing their critical bug hunting techniques &amp;amp; tips sharing via twitter and other platforms. I would like share whole tips / tricks at one place. Would  like to keep  update my post.&lt;/p&gt;
+
+&lt;h3 id=&quot;bug-bounty-tips---tricks&quot;&gt;Bug Bounty Tips  &amp;amp; Tricks&lt;/h3&gt;
+
+&lt;h5 id=&quot;title-admin-panel-access---developers-browser-saved-password-list&quot;&gt;Title: Admin Panel Access - Developers Browser Saved Password list&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Got Admin Panel credentials leaked in a developers browser-saved password list on Github. (Bad idea)&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://site.com&quot;&lt;/span&gt; extension:csv  - &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Github Dork&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/IfrahIman_/status/1342833548059955202&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-rce-cheatsheet---ansar&quot;&gt;Title: RCE Cheatsheet - Ansar&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Hunting RCE bugs reference tools/links.&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;1.png&quot; alt=&quot;Bug Bounty RCE Tips&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/Ansar0047/status/1341515400270376962&quot;&gt;Twitter Post&lt;/a&gt; &lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-word-press---vulnerable-plugins&quot;&gt;Title: Word Press - Vulnerable Plugins&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Find out the vulnerable plugins and relevant bugs.&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- http://site.com was using wordpress
+- Found via wappalyzer&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; found version
+- Scan all plugin
+- wpscan &lt;span class=&quot;nt&quot;&gt;--url&lt;/span&gt; http://site.com
+- Search &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;cve &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;specific version
+- Found jsmol plugin vulnerable to ssf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/naman_1910/status/1343419459357196289&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-csrfidor-in-2-minutes&quot;&gt;Title: CSRF+IDOR in 2 minutes&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Identify the CSRF+IDOR bug using below technique. &lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Update profile name and pic
+- Capture request
+- Remove csrf header //bypass
+- Change &lt;span class=&quot;nb&quot;&gt;id &lt;/span&gt;to victime  &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;
+- Luckily &lt;span class=&quot;nb&quot;&gt;id &lt;/span&gt;was leaking &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;public profile
+- Send the request name,address,profile pic changed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/naman_1910/status/1343146066795847684&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-broken-access-control-to-mass-account-takeover&quot;&gt;Title: Broken Access Control to Mass Account Takeover&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Mass account take over bug &lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;2.jpeg&quot; alt=&quot;Mass Account Takeover&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/krizzsk/status/1340998220902625280&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-useful-search-engines-for-bug-hunters&quot;&gt;Title: Useful Search engines for Bug Hunters&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Search engines for hackers/researchers.&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;3.jpeg&quot; alt=&quot;Mass Account Takeover&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/secnhack/status/1342847754687549441&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-http-request-smuggling-bug&quot;&gt;Title: HTTP Request Smuggling Bug&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: HTTP request smuggling is a technique for interfering with the way a web site processes sequences of HTTP requests that are received from one or more users.&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;httpx &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; subfinder &lt;span class=&quot;nt&quot;&gt;-silent&lt;/span&gt; | rush &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; 300 &lt;span class=&quot;s1&quot;&gt;'python3 http://smuggler.py -u {} --quiet'&lt;/span&gt; FireFirecracker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;figure&gt;
+&lt;img src=&quot;4.png&quot; alt=&quot;Mass Account Takeover&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/secnhack/status/1343135065824403457&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/defparam/smuggler&quot;&gt;Github&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://portswigger.net/web-security/request-smuggling&quot;&gt;Article&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title-github-dorks--company-osintbugsdisclosure&quot;&gt;Title: Github Dorks : Company OSINT/Bugs/Disclosure&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Company based Github Dorks&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;company name&quot;&lt;/span&gt; db_password
+&lt;span class=&quot;s2&quot;&gt;&quot;company name&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Authorization: Bearer&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;company name&quot;&lt;/span&gt; filename:vim_settings.xml
+&lt;span class=&quot;s2&quot;&gt;&quot;company name&quot;&lt;/span&gt; language:shell
+&lt;span class=&quot;s2&quot;&gt;&quot;company name&quot;&lt;/span&gt; language:python
+&lt;span class=&quot;s2&quot;&gt;&quot;company name&quot;&lt;/span&gt; fb_secret
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/payloadartist/status/1341811781728133122&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title--bypassing-file-upload-filters&quot;&gt;Title:  Bypassing File Upload Filters&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bypass the file upload filters using below techniques&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;5.jpeg&quot; alt=&quot;Bypass file upload filters&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/infosecsanyam/status/1342743262352781313&quot;&gt;Twitter Post&lt;/a&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title--tools-list-hunt-xss-vulnerabilitiesbugs&quot;&gt;Title:  Tools List: Hunt XSS Vulnerabilities/Bugs&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Hunting XSS vulnerable bugs using below tools. &lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;XSSer
+W3af
+Probely
+Power fuzzer
+Burp Suite
+Netsparker
+ZAProxy
+WebScarab
+XSStrike
+XSScrapy
+wfuzz
+ImmuniWeb On-demand
+nmap
+JMeter
+wapiti
+ZAP-CLI
+Arachni
+XSS Hunter
+Firebug
+xsssniper
+Skipfish
+KNOXSS
+Acunetix
+Psalm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/_Bugbountytips_/status/1343624782814867457&quot;&gt;Twitter Post&lt;/a&gt;&lt;br /&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;
+&lt;h5 id=&quot;title--bypassing-file-upload-filters-1&quot;&gt;Title:  Bypassing File Upload Filters&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Bypass the file upload filters using below techniques&lt;br /&gt;
+&lt;strong&gt;Trick/Tip&lt;/strong&gt;:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;5.jpeg&quot; alt=&quot;Bypass file upload filters&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;: &lt;a href=&quot;https://twitter.com/infosecsanyam/status/1342743262352781313&quot;&gt;Twitter Post&lt;/a&gt;
+——————————————————————————————————————————————————————————————————————————&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="bugbounty" /><category term="tricks" /><category term="tips" /><category term="twitter" /><summary type="html">In these days lot of bug bounty hunters were sharing their critical bug hunting techniques &amp;amp; tips sharing via twitter and other platforms. I would like share whole tips / tricks at one place. Would like to keep update my post.</summary></entry><entry><title type="html">Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams</title><link href="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/" rel="alternate" type="text/html" title="Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams" /><published>2020-12-22T04:00:00+07:00</published><updated>2020-12-22T04:00:00+07:00</updated><id>http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation</id><content type="html" xml:base="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/">&lt;p&gt;Last few days, Solarigate aka Sunburst zero-day backdoor is being very popular in Infosec world. There was lot of enterprise/govt/nationalagencies/organisations were affected by this backdoor and most of the CSIRT/SOC/SecOps teams were very busy with handling related to solarwinds backdoor incidents.&lt;/p&gt;
 
 &lt;p&gt;In this article, I would like to share some IR tips/experiences/plan and threat model on this incident and most of organisations and teams were looking for proper IR plan and investigation steps with proper remediation.&lt;/p&gt;
 
@@ -421,24 +550,4 @@ Deny from all
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="github" /><category term="googledork" /><category term="defense" /><summary type="html">As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.</summary></entry><entry><title type="html">DevOps Security - Scanning SSH keys for Weak credentials</title><link href="http://localhost:4000/devops-vagrant-default-cred-check/" rel="alternate" type="text/html" title="DevOps Security - Scanning SSH keys for Weak credentials" /><published>2017-02-21T21:00:00+07:00</published><updated>2017-02-21T21:00:00+07:00</updated><id>http://localhost:4000/devops-vagrant-default-cred-check</id><content type="html" xml:base="http://localhost:4000/devops-vagrant-default-cred-check/">&lt;p&gt;Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.&lt;/p&gt;
-
-&lt;h4 id=&quot;devops-environment---security-checks-ssh-keys&quot;&gt;DevOps Environment - Security Checks (SSH Keys):&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Most of the DevOps environment VMs/Machines are using default credentials (vagrant/vagrant , root/vagrant)&lt;/li&gt;
-  &lt;li&gt;Scanning the default SSH keys using metasploit - ssh_login_pubkey module.&lt;/li&gt;
-  &lt;li&gt;Identify the weak SSH keys versions after the scan.&lt;/li&gt;
-  &lt;li&gt;Login with Private key.&lt;/li&gt;
-  &lt;li&gt;Get the vagrant/root shell.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;devops---ssh-weak-keys-scan&quot;&gt;DevOps - SSH weak keys scan:&lt;/h5&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/devops-vagrant-default-cred-check/Vagrant_SSH.gif&quot; alt=&quot;DevOps - Security Checks&quot; /&gt;
-&lt;figcaption&gt; Steps to Reproduce - DevSecOps (SSH Keys) &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rapid7/metasploit-framework&quot;&gt;Metasploit&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="Devops" /><category term="Security" /><category term="Metasploit" /><summary type="html">Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="github" /><category term="googledork" /><category term="defense" /><summary type="html">As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.</summary></entry></feed>
