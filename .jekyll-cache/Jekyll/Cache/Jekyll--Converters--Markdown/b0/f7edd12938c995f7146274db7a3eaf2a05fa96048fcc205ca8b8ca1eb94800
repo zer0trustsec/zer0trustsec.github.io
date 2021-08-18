@@ -1,0 +1,110 @@
+I"$<p>Most of the companies</p>
+
+<h3 id="endpoint-discovery-microsoft-defender-endpoint">Endpoint Discovery: (Microsoft Defender Endpoint)</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Devices that are not onboarded
+DeviceInfo
+| where OnboardingStatus <span class="o">!=</span> <span class="s2">"Onboarded"</span>
+| where isempty<span class="o">(</span> <span class="o">[</span><span class="s1">'MergedToDeviceId'</span><span class="o">])</span>
+| where isnotempty<span class="o">(</span> DeviceName<span class="o">)</span>
+| where isnotempty<span class="o">(</span> OSPlatform<span class="o">)</span>
+| summarize arg_max<span class="o">(</span>Timestamp,<span class="k">*</span><span class="o">)</span> by DeviceId
+</code></pre></div></div>
+
+<h3 id="nmap-discovery-dhcp">Nmap Discovery: (DHCP)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">-sV</span> <span class="nt">--allports</span> <span class="nt">-T4</span> 10.1.0.0/24
+Nmap scan report <span class="k">for </span>10.1.0.1
+Host is up <span class="o">(</span>0.0038s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 995 filtered ports
+PORT     STATE SERVICE        VERSION
+53/tcp   open  domain         Unbound
+80/tcp   open  http           nginx
+2022/tcp open  ssh            OpenSSH 7.5 <span class="o">(</span>protocol 2.0<span class="o">)</span>
+5000/tcp open  ssl/http-proxy HAProxy http proxy 1.3.1 or later
+8443/tcp open  ssl/http       nginx
+Service Info: Device: load balancer
+
+Nmap scan report <span class="k">for </span>10.1.0.2
+Host is up <span class="o">(</span>0.82s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 992 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.3p1 Debian 1 <span class="o">(</span>protocol 2.0<span class="o">)</span>
+80/tcp   open  http     nginx
+111/tcp  open  rpcbind  2-4 <span class="o">(</span>RPC <span class="c">#100000)</span>
+443/tcp  open  ssl/http nginx
+2049/tcp open  nfs      3-4 <span class="o">(</span>RPC <span class="c">#100003)</span>
+3260/tcp open  iscsi?
+6000/tcp open  http     aiohttp 3.6.2 <span class="o">(</span>Python 3.8<span class="o">)</span>
+8080/tcp open  http     Apache httpd 2.4.46 <span class="o">((</span>Debian<span class="o">)</span> mpm-itk/2.4.7-04 OpenSSL/1.1.1g<span class="o">)</span>
+Service Info: OS: Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel
+</code></pre></div></div>
+
+<h3 id="nmap-discovery-upnp">Nmap Discovery: (UPnP)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>nmap <span class="nt">--script</span> broadcast-dhcp-discover <span class="nt">-e</span> bond0
+Starting Nmap 7.70 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2020-10-28 19:24 CDT
+Pre-scan script results:
+| dhcp:
+|   Response 1 of 2:
+|     Interface: bond0
+|     IP Offered: 10.1.0.78
+|     DHCP Message Type: DHCPOFFER
+|     Server Identifier: 10.1.0.1
+|     IP Address Lease Time: 5m00s
+|     Subnet Mask: 255.255.255.0
+|     Router: 10.1.0.1
+|     Domain Name Server: 10.1.0.1
+|     Domain Name: lab.opencloud.io
+|   Response 2 of 2:
+|     Interface: bond0
+|     IP Offered: 10.1.0.27
+|     DHCP Message Type: DHCPOFFER
+|     Server Identifier: 10.1.0.3
+|     IP Address Lease Time: 2m00s
+|     Renewal Time Value: 1m00s
+|     Rebinding Time Value: 1m45s
+|     Subnet Mask: 255.255.255.0
+|     Broadcast Address: 10.1.0.255
+|     Router: 10.1.0.3
+|_    Domain Name Server: 10.1.0.3
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap <span class="k">done</span>: 0 IP addresses <span class="o">(</span>0 hosts up<span class="o">)</span> scanned <span class="k">in </span>10.31 seconds
+
+</code></pre></div></div>
+
+<p>In modern days, most of the tech websites were collecting your information using via browser. Most of the websites accessing lot of personal/device/network information without enduser permission.</p>
+
+<h4 id="what-browser-can-access-from-enduser-endpoint">What browser can access from enduser endpoint:</h4>
+
+<ol>
+  <li>Location</li>
+  <li>Software (OS / Browser version / Browser Plugins)</li>
+  <li>Hardware (CPU info / GPU / Battery percentage )</li>
+  <li>Network Connection ( Public IP / Download Speed )</li>
+  <li>Social Media (Currently logged in Social media websites information )</li>
+  <li>Click jacking</li>
+  <li>Auto-fill Browser data (Phishing )</li>
+  <li>Gyroscope</li>
+  <li>Network scan (WiFi/LAN scan from browser itself )</li>
+  <li>Images ( Metadata reveals )</li>
+</ol>
+
+<h4 id="demo-website">Demo Website</h4>
+
+<p><a href="https://webkay.robinlinus.com/">https://webkay.robinlinus.com/</a></p>
+
+<h4 id="enduser-best-practices">Enduser Best Practices</h4>
+<p>Most of the websites were executing Java scripts to extract &amp; data collection from end user browser.To block those scripts running in background, we have to install below items:</p>
+<ol>
+  <li><a href="https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm?hl=en">NoScript Chrome browser Add-on</a></li>
+  <li><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/">NoScript Mozilla browser Add-on</a></li>
+  <li>Enable Private Browsing in enduser’s browser.</li>
+  <li>Use Web-proxy to hide your real IP identity.</li>
+</ol>
+
+<h3 id="references">References</h3>
+<ul>
+  <li><a href="https://www.reddit.com/r/InternetIsBeautiful/comments/4d8x6f/this_website_tells_you_what_your_browser_knows/">Reddit</a></li>
+</ul>
+:ET

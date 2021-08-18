@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Microsoft Defender Endpoint | Unmanaged Devices - Detection | Not Onboarded Devies",
+      "tags"     : "blueteam, detection, defender, endpoint",
+      "url"      : "/microsoft-defender-endpoint-rogue-devices-not-onboarding/",
+      "date"     : "2021-06-03 14:00:00 +0700"
+    } ,
+  
+    {
       "title"    : "Solarigate/Sunburst Incident Response Playbook &amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams",
       "tags"     : "blueteam, solarwinds, triage, ir, investigation, forensics",
       "url"      : "/blueteam_solarigate_sunburst_ir_playbook_investigation/",

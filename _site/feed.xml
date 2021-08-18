@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2021-08-18T12:24:48+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams</title><link href="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/" rel="alternate" type="text/html" title="Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams" /><published>2020-12-22T04:00:00+07:00</published><updated>2020-12-22T04:00:00+07:00</updated><id>http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation</id><content type="html" xml:base="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/">&lt;p&gt;Last few days, Solarigate aka Sunburst zero-day backdoor is being very popular in Infosec world. There was lot of enterprise/govt/nationalagencies/organisations were affected by this backdoor and most of the CSIRT/SOC/SecOps teams were very busy with handling related to solarwinds backdoor incidents.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2021-08-18T21:53:19+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog | Cyber Security</title><subtitle>He's sharing his experiences and knowledge about reallife cyber security incidents and shares with community.</subtitle><author><name>Santhosh Baswa</name></author><entry><title type="html">Microsoft Defender Endpoint | Unmanaged Devices - Detection | Not Onboarded Devies</title><link href="http://localhost:4000/microsoft-defender-endpoint-rogue-devices-not-onboarding/" rel="alternate" type="text/html" title="Microsoft Defender Endpoint | Unmanaged Devices - Detection | Not Onboarded Devies" /><published>2021-06-03T14:00:00+07:00</published><updated>2021-06-03T14:00:00+07:00</updated><id>http://localhost:4000/microsoft-defender-endpoint-rogue-devices-not-onboarding</id><content type="html" xml:base="http://localhost:4000/microsoft-defender-endpoint-rogue-devices-not-onboarding/">&lt;p&gt;Most of the companies having unmanaged/rogue devices inside their network, and not available in their asset inventory management. It will be big risk for enterprises/organisations, so they having to improve their rogue device detection and visbility over the network and asset management.&lt;/p&gt;
+
+&lt;h3 id=&quot;incident-response-team---plan&quot;&gt;Incident Response Team - Plan&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Collect asset management data from multiple teams.&lt;/li&gt;
+  &lt;li&gt;Compare the old and updated asset data and identify the new devices.&lt;/li&gt;
+  &lt;li&gt;Look at JIRA/Ticketing tools about those newly detected devices in the network.&lt;/li&gt;
+  &lt;li&gt;Track and contain unknown devices inside the network.&lt;/li&gt;
+  &lt;li&gt;Actively hunt using existing SIEM/EDR technology.&lt;/li&gt;
+  &lt;li&gt;Enable rogue device detections inside your vulnerability management tools.&lt;/li&gt;
+  &lt;li&gt;Investigate rogue/unmanaged device traffic and hunt unknown behaviours across the network.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;endpoint-discovery-microsoft-defender-endpoint&quot;&gt;Endpoint Discovery: (Microsoft Defender Endpoint)&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Devices that are not onboarded
+DeviceInfo
+| where OnboardingStatus &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Onboarded&quot;&lt;/span&gt;
+| where isempty&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MergedToDeviceId'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;
+| where isnotempty&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; DeviceName&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| where isnotempty&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; OSPlatform&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+| summarize arg_max&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Timestamp,&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; by DeviceId
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;nmap-discovery-dhcp&quot;&gt;Nmap Discovery: (DHCP)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sV&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--allports&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-T4&lt;/span&gt; 10.1.0.0/24
+Nmap scan report &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;10.1.0.1
+Host is up &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;0.0038s latency&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Not shown: 995 filtered ports
+PORT     STATE SERVICE        VERSION
+53/tcp   open  domain         Unbound
+80/tcp   open  http           nginx
+2022/tcp open  ssh            OpenSSH 7.5 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;protocol 2.0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+5000/tcp open  ssl/http-proxy HAProxy http proxy 1.3.1 or later
+8443/tcp open  ssl/http       nginx
+Service Info: Device: load balancer
+
+Nmap scan report &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;10.1.0.2
+Host is up &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;0.82s latency&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Not shown: 992 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.3p1 Debian 1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;protocol 2.0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+80/tcp   open  http     nginx
+111/tcp  open  rpcbind  2-4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;RPC &lt;span class=&quot;c&quot;&gt;#100000)&lt;/span&gt;
+443/tcp  open  ssl/http nginx
+2049/tcp open  nfs      3-4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;RPC &lt;span class=&quot;c&quot;&gt;#100003)&lt;/span&gt;
+3260/tcp open  iscsi?
+6000/tcp open  http     aiohttp 3.6.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Python 3.8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+8080/tcp open  http     Apache httpd 2.4.46 &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;Debian&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; mpm-itk/2.4.7-04 OpenSSL/1.1.1g&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Service Info: OS: Linux&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; CPE: cpe:/o:linux:linux_kernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;nmap-discovery-upnp&quot;&gt;Nmap Discovery: (UPnP)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nmap &lt;span class=&quot;nt&quot;&gt;--script&lt;/span&gt; broadcast-dhcp-discover &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; bond0
+Starting Nmap 7.70 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; https://nmap.org &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; at 2020-10-28 19:24 CDT
+Pre-scan script results:
+| dhcp:
+|   Response 1 of 2:
+|     Interface: bond0
+|     IP Offered: 10.1.0.78
+|     DHCP Message Type: DHCPOFFER
+|     Server Identifier: 10.1.0.1
+|     IP Address Lease Time: 5m00s
+|     Subnet Mask: 255.255.255.0
+|     Router: 10.1.0.1
+|     Domain Name Server: 10.1.0.1
+|     Domain Name: lab.opencloud.io
+|   Response 2 of 2:
+|     Interface: bond0
+|     IP Offered: 10.1.0.27
+|     DHCP Message Type: DHCPOFFER
+|     Server Identifier: 10.1.0.3
+|     IP Address Lease Time: 2m00s
+|     Renewal Time Value: 1m00s
+|     Rebinding Time Value: 1m45s
+|     Subnet Mask: 255.255.255.0
+|     Broadcast Address: 10.1.0.255
+|     Router: 10.1.0.3
+|_    Domain Name Server: 10.1.0.3
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;: 0 IP addresses &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;0 hosts up&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; scanned &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;10.31 seconds
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Santhosh Baswa</name></author><category term="blueteam" /><category term="detection" /><category term="defender" /><category term="endpoint" /><summary type="html">Most of the companies having unmanaged/rogue devices inside their network, and not available in their asset inventory management. It will be big risk for enterprises/organisations, so they having to improve their rogue device detection and visbility over the network and asset management.</summary></entry><entry><title type="html">Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams</title><link href="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/" rel="alternate" type="text/html" title="Solarigate/Sunburst Incident Response Playbook &amp;amp; Investigation/Hunting/MindMap for CSIRT/SOC/InfoSec/SecOps Teams" /><published>2020-12-22T04:00:00+07:00</published><updated>2020-12-22T04:00:00+07:00</updated><id>http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation</id><content type="html" xml:base="http://localhost:4000/blueteam_solarigate_sunburst_ir_playbook_investigation/">&lt;p&gt;Last few days, Solarigate aka Sunburst zero-day backdoor is being very popular in Infosec world. There was lot of enterprise/govt/nationalagencies/organisations were affected by this backdoor and most of the CSIRT/SOC/SecOps teams were very busy with handling related to solarwinds backdoor incidents.&lt;/p&gt;
 
 &lt;p&gt;In this article, I would like to share some IR tips/experiences/plan and threat model on this incident and most of organisations and teams were looking for proper IR plan and investigation steps with proper remediation.&lt;/p&gt;
 
@@ -421,24 +505,4 @@ Deny from all
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="github" /><category term="googledork" /><category term="defense" /><summary type="html">As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.</summary></entry><entry><title type="html">DevOps Security - Scanning SSH keys for Weak credentials</title><link href="http://localhost:4000/devops-vagrant-default-cred-check/" rel="alternate" type="text/html" title="DevOps Security - Scanning SSH keys for Weak credentials" /><published>2017-02-21T21:00:00+07:00</published><updated>2017-02-21T21:00:00+07:00</updated><id>http://localhost:4000/devops-vagrant-default-cred-check</id><content type="html" xml:base="http://localhost:4000/devops-vagrant-default-cred-check/">&lt;p&gt;Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.&lt;/p&gt;
-
-&lt;h4 id=&quot;devops-environment---security-checks-ssh-keys&quot;&gt;DevOps Environment - Security Checks (SSH Keys):&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Most of the DevOps environment VMs/Machines are using default credentials (vagrant/vagrant , root/vagrant)&lt;/li&gt;
-  &lt;li&gt;Scanning the default SSH keys using metasploit - ssh_login_pubkey module.&lt;/li&gt;
-  &lt;li&gt;Identify the weak SSH keys versions after the scan.&lt;/li&gt;
-  &lt;li&gt;Login with Private key.&lt;/li&gt;
-  &lt;li&gt;Get the vagrant/root shell.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;devops---ssh-weak-keys-scan&quot;&gt;DevOps - SSH weak keys scan:&lt;/h5&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/zer0trustsec/zer0trustsec.github.io/master/_posts/devops-vagrant-default-cred-check/Vagrant_SSH.gif&quot; alt=&quot;DevOps - Security Checks&quot; /&gt;
-&lt;figcaption&gt; Steps to Reproduce - DevSecOps (SSH Keys) &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;tools-used&quot;&gt;Tools used:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rapid7/metasploit-framework&quot;&gt;Metasploit&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="Devops" /><category term="Security" /><category term="Metasploit" /><summary type="html">Most of the enterprise companies were migrating their infrastructure to cloud. They focused mainly on security in cloud, and DevOps teams were implementing CI/CD pipeline and integrating their tools with security tooling. In our article i would like to discuss to detect weak SSH credentials in DevOps environments using Metasploit tool.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;</content><author><name>Santhosh Baswa</name></author><category term="github" /><category term="googledork" /><category term="defense" /><summary type="html">As a part of OSINT/Recon activity to identify sensitive information for specific organisation/website most of the security engineers were using Google dorks. In this article we were identifying the vulnerable websites which exposes .git folders in their web servers.</summary></entry></feed>
